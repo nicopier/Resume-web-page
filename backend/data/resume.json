@@ -1,0 +1,16 @@
+{
+    "name": "Nicolás Piersanti",
+    "headline": "Python/SQL • Automations • Localization/AI Engineer",
+    "location": "Argentina",
+    "skills": ["Python", "FastAPI", "SQL", "Azure", "Pandas"],
+    "experience": [
+      {
+        "company": "Centific",
+        "role": "Localization Engineer",
+        "start": "2023-01-01",
+        "end": null,
+        "summary": "Automatización con Python, pipelines y APIs."
+      }
+    ]
+  }
+  
