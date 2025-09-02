@@ -1,6 +1,9 @@
 # Resume-web-page
 Webpage made in Python and Angular for create and download a personal Resume
 
+# Before start to read this please see the video below
+https://www.youtube.com/watch?v=1XYoduQMAjU
+
 # 📌 Interactive Resume
 
 This project is a **full-stack web application** that allows you to create and display an interactive resume.  

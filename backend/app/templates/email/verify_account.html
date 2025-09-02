@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="color-scheme" content="light only" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Verificar cuenta</title>
+</head>
+<body style="margin:0;padding:0;background:#f6f8fb;font-family:Arial,Helvetica,sans-serif;">
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f6f8fb;">
+    <tr><td align="center" style="padding:24px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;background:#ffffff;border-radius:10px;overflow:hidden;border:1px solid #e8edf3;">
+        <tr>
+          <td style="padding:24px 24px 0 24px;text-align:center;">
+            <h1 style="margin:0;font-size:22px;color:#111827;">Verificá tu cuenta</h1>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 24px 0 24px;color:#374151;font-size:14px;line-height:1.6;">
+            <p style="margin:0;">Hola {{ user_name }},</p>
+            <p>Gracias por registrarte en <b>{{ app_name }}</b>. Para empezar a usar tu cuenta, confirmá tu correo electrónico.</p>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding:20px 24px;">
+            <a href="{{ action_url }}"
+               style="display:inline-block;background:#2563eb;color:#ffffff;text-decoration:none;padding:12px 18px;border-radius:8px;font-weight:bold;">
+               Verificar correo
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 24px 8px 24px;color:#6b7280;font-size:12px;line-height:1.6;">
+            <p style="margin:0;">El enlace vence en {{ expire_minutes }} minutos.</p>
+            <p style="margin:0;">Si el botón no funciona, copiá y pegá este enlace en tu navegador:</p>
+            <p style="word-break:break-all;margin:8px 0 0 0;">
+              <a href="{{ action_url }}" style="color:#2563eb;">{{ action_url }}</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 24px 24px 24px;color:#9ca3af;font-size:12px;border-top:1px solid #e8edf3;">
+            <p style="margin:0;">Si no creaste esta cuenta, ignorá este correo o escribinos a {{ support_email }}.</p>
+            <p style="margin:8px 0 0 0;">© {{ year }} {{ app_name }}</p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>

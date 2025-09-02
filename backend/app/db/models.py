@@ -4,7 +4,7 @@ from datetime import datetime
 from typing import Optional
 
 from sqlalchemy.orm import declarative_base, Mapped, mapped_column, relationship
-from sqlalchemy import String, Integer, DateTime, JSON, func, ForeignKey, UniqueConstraint, Index, Boolean
+from sqlalchemy import String, Integer, DateTime, JSON, func, ForeignKey, UniqueConstraint, Index, Boolean, text
 
 Base = declarative_base()
 
@@ -20,7 +20,14 @@ class User(Base):
     # Enum en SQLAlchemy (coincide con tu ENUM de MySQL)
     provider: Mapped[str | None] = mapped_column(String(50), default="local", nullable=True)
 
-    # 👇 ESTA era la línea que rompía: faltaba el tipo (datetime)
+    #NUEVO: versión de contraseña
+    password_version: Mapped[int] = mapped_column(Integer, nullable=False, default=0, server_default="0")
+
+    # Verificación de email
+    is_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("0"))
+    verified_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    last_verification_sent: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
+    
     created_at: Mapped[datetime] = mapped_column(
         DateTime, server_default=func.now(), nullable=False
     )
