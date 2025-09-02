@@ -1,0 +1,7 @@
+<form [formGroup]="group" class="grid">
+  <mat-form-field class="w100">
+    <mat-label>Sobre mí</mat-label>
+    <textarea matInput formControlName="about" rows="6" maxlength="600"></textarea>
+    <mat-hint align="end">{{ (group.get('about')?.value?.length || 0) }}/600</mat-hint>
+  </mat-form-field>
+</form>

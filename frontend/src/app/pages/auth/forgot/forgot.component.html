@@ -1,0 +1,33 @@
+<div class="forgot-wrap">
+  <h1 i18n="@@forgot.title">¿Olvidaste tu contraseña?</h1>
+  <p i18n="@@forgot.subtitle">
+    Escribí tu email y te enviaremos un enlace para restablecerla.
+  </p>
+
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label for="email" i18n="@@forgot.label.email">Email</label>
+    <input id="email" type="email" formControlName="email" />
+
+    <div class="err" *ngIf="f.email.touched && f.email.invalid">
+      <span *ngIf="f.email.errors?.['required']" i18n="@@forgot.error.required">
+        El email es obligatorio.
+      </span>
+      <span *ngIf="f.email.errors?.['email']" i18n="@@forgot.error.format">
+        Formato de email inválido.
+      </span>
+    </div>
+
+    <button type="submit" [disabled]="loading" i18n="@@forgot.button">
+      {{ loading ? 'Enviando...' : 'Enviar enlace' }}
+    </button>
+  </form>
+
+  <div class="ok" *ngIf="sent" i18n="@@forgot.success">
+    Si el email existe, te enviamos un enlace para restablecer la contraseña.
+    Revisá tu bandeja de entrada y Spam.
+  </div>
+
+  <div class="err" *ngIf="errorMsg" i18n="@@forgot.fail">
+    {{ errorMsg }}
+  </div>
+</div>

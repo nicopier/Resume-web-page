@@ -1,0 +1,35 @@
+<form [formGroup]="group" class="grid">
+  <mat-form-field appearance="fill" class="w100">
+    <mat-label i18n="@@personal.language">Idioma</mat-label>
+    <mat-select formControlName="locale" required>
+      <mat-option *ngFor="let lc of locales" [value]="lc">{{ lc }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@personal.fullName">Nombre completo</mat-label>
+    <input matInput formControlName="full_name" required placeholder="Ej: Juan Pérez" i18n-placeholder="@@personal.fullNamePlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@personal.email">Email</mat-label>
+    <input matInput formControlName="email" required placeholder="ejemplo@correo.com" i18n-placeholder="@@personal.emailPlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@personal.phone">Teléfono</mat-label>
+    <input matInput formControlName="phone" placeholder="+54 9 11 1234-5678" i18n-placeholder="@@personal.phonePlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@personal.location">Ubicación</mat-label>
+    <input matInput formControlName="location" placeholder="Ciudad, País" i18n-placeholder="@@personal.locationPlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@personal.birthDate">Fecha de nacimiento</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="birth_date" placeholder="YYYY-MM-DD" i18n-placeholder="@@personal.birthDatePlaceholder">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</form>

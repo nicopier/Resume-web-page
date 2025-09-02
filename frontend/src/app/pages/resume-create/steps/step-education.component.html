@@ -1,0 +1,28 @@
+<div *ngFor="let fg of array.controls; let i = index" [formGroup]="fg" class="grid">
+  <mat-form-field class="w100">
+    <mat-label i18n="@@education.school">Institución</mat-label>
+    <input matInput formControlName="school" required placeholder="Ej: Universidad X" i18n-placeholder="@@education.schoolPlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@education.degree">Título / Carrera</mat-label>
+    <input matInput formControlName="degree" required placeholder="Ej: Ingeniería Informática" i18n-placeholder="@@education.degreePlaceholder">
+  </mat-form-field>
+
+  <!-- PERÍODO (Inicio/Fin) con un solo picker -->
+  <mat-form-field class="w100">
+    <mat-label i18n="@@education.period">Período</mat-label>
+    <mat-date-range-input [rangePicker]="eduRangePicker">
+      <input matStartDate formControlName="start" placeholder="Inicio" i18n-placeholder="@@education.startPlaceholder">
+      <input matEndDate formControlName="end" [disabled]="fg.get('still')?.value" placeholder="Fin" i18n-placeholder="@@education.endPlaceholder">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="eduRangePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #eduRangePicker></mat-date-range-picker>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="still" i18n="@@education.still">Cursando actualmente</mat-checkbox>
+  <button mat-button color="warn" (click)="remove.emit(i)" i18n="@@education.remove">Eliminar</button>
+  <hr>
+</div>
+
+<button mat-stroked-button color="primary" (click)="add.emit()" i18n="@@education.add">Agregar estudio</button>

@@ -1,0 +1,59 @@
+<header class="nav-wrap">
+  <nav class="nav">
+    <a class="brand" routerLink="/home" i18n-aria-label="@@brandAria" aria-label="Ir a inicio">
+      <span class="logo">📝</span>
+      <span class="brand-text" i18n="@@brandName">Resume Maker</span>
+    </a>
+
+    <ul class="menu" role="menubar">
+      <li role="none">
+        <a routerLink="/home"
+           routerLinkActive="active"
+           [routerLinkActiveOptions]="{ exact: true }"
+           role="menuitem"
+           i18n="@@navHome">Home</a>
+      </li>
+      <li role="none">
+        <a routerLink="/resume"
+           routerLinkActive="active"
+           role="menuitem"
+           i18n="@@navResumeList">Resumes</a>
+      </li>
+      <li role="none">
+        <a routerLink="/resume/new"
+           routerLinkActive="active"
+           role="menuitem"
+           i18n="@@navResumeCreate">Crear Resume</a>
+      </li>
+    </ul>
+
+    <div class="actions">
+      <button class="btn logout"
+              type="button"
+              (click)="logout()"
+              i18n-aria-label="@@logoutAria"
+              aria-label="Cerrar sesión"
+              i18n="@@logoutBtn">
+        Logout
+      </button>
+    </div>
+
+    <button class="hamb" type="button" (click)="open = !open"
+            aria-haspopup="true" [attr.aria-expanded]="open"
+            aria-label="Menu" i18n-aria-label="@@menuAria">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="drawer" [class.open]="open">
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" i18n="@@navHome">Home</a>
+    <a routerLink="/resume" routerLinkActive="active" i18n="@@navResumeList">Resumes</a>
+    <a routerLink="/resume/new" routerLinkActive="active" i18n="@@navResumeCreate">Crear Resume</a>
+    <button class="btn logout" type="button" (click)="logout()" i18n="@@logoutBtn">Logout</button>
+  </div>
+</header>
+
+<main class="page">
+  <router-outlet></router-outlet>
+</main>

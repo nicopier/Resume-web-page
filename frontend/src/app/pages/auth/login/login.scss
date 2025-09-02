@@ -1,0 +1,143 @@
+// Variables de colores
+$color-primary: #74b9ff;
+$color-primary-dark: #0984e3;
+$color-bg-start: #74ebd5;
+$color-bg-end: #ACB6E5;
+$color-text: #333;
+$color-subtext: #666;
+
+.auth-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $color-bg-start, $color-bg-end);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+
+    .app-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: $color-text;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: $color-subtext;
+    }
+
+    .field {
+      margin-bottom: 1rem;
+      text-align: left;
+
+      .lbl {
+        display: block;
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 0.4rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.7rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 0.95rem;
+        outline: none;
+        transition: border-color 0.2s ease;
+
+        &:focus {
+          border-color: $color-primary;
+        }
+      }
+
+      .err {
+        font-size: 0.8rem;
+        color: red;
+      }
+    }
+
+    .btn.primary {
+      width: 100%;
+      padding: 0.8rem;
+      background: $color-primary;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.2s ease;
+
+      &:hover {
+        background: $color-primary-dark;
+      }
+    }
+
+    .links {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+
+      .link {
+        color: $color-primary-dark;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      .sep {
+        margin: 0 0.5rem;
+        color: $color-subtext;
+      }
+    }
+
+    .error-banner {
+      margin-top: 1rem;
+      color: #d63031;
+      font-weight: bold;
+    }
+  }
+  /* cartel de no verificado */
+.card .alert-warn {
+  margin-top: 1rem;
+  text-align: left;
+  background: #fff7ed;             /* ámbar claro */
+  border: 1px solid #ffedd5;
+  color: #9a3412;
+  border-radius: 8px;
+  padding: 12px 14px;
+
+  .title {
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+}
+
+/* botón tipo link */
+.card .btn-link {
+  background: none;
+  border: none;
+  padding: 0 0 0 .5rem;
+  color: $color-primary-dark;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: .6;
+    cursor: not-allowed;
+    text-decoration: none;
+  }
+}
+}
+

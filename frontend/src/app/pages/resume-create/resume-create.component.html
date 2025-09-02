@@ -1,0 +1,75 @@
+<mat-horizontal-stepper [linear]="stepLinear">
+  <!-- PASO 1: Información personal -->
+  <mat-step
+    [stepControl]="form"
+    [completed]="isPersonalComplete()"
+    label="Información personal"
+  >
+    <app-step-personal [group]="form" [locales]="locales"></app-step-personal>
+
+    <div class="actions">
+      <!-- habilitamos Siguiente solo con los 3 campos clave -->
+      <button mat-button matStepperNext [disabled]="!isPersonalComplete()">
+        Siguiente
+      </button>
+    </div>
+  </mat-step>
+
+  <!-- PASO 2: Introducción -->
+  <mat-step [stepControl]="introGroup" label="Introducción">
+    <app-step-intro [group]="introGroup"></app-step-intro>
+    <div class="actions">
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button matStepperNext [disabled]="introGroup.invalid">
+        Siguiente
+      </button>
+    </div>
+  </mat-step>
+
+  <!-- PASO 3: Estudios -->
+  <mat-step label="Estudios">
+    <app-step-education
+      [array]="educationArray()"
+      (add)="addEducation()"
+      (remove)="removeEducation($event)"
+    ></app-step-education>
+    <div class="actions">
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button matStepperNext
+              [disabled]="educationArray().length === 0 || educationArray().invalid">
+        Siguiente
+      </button>
+    </div>
+  </mat-step>
+
+  <!-- PASO 4: Experiencia -->
+  <mat-step label="Experiencia">
+    <app-step-experience
+      [array]="experienceArray()"
+      (add)="addExperience()"
+      (remove)="removeExperience($event)"
+    ></app-step-experience>
+    <div class="actions">
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-button matStepperNext
+              [disabled]="experienceArray().length === 0 || experienceArray().invalid">
+        Siguiente
+      </button>
+    </div>
+  </mat-step>
+
+  <!-- PASO 5: Habilidades -->
+  <mat-step label="Habilidades">
+    <app-step-skills
+      [array]="skillsArray()"
+      (add)="addSkill()"
+      (remove)="removeSkill($event)"
+    ></app-step-skills>
+    <div class="actions">
+      <button mat-button matStepperPrevious>Anterior</button>
+      <button mat-flat-button color="primary" (click)="submit()" [disabled]="loading">
+        Guardar
+      </button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>

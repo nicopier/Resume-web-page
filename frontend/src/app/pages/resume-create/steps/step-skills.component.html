@@ -1,0 +1,18 @@
+<div *ngFor="let fg of array.controls; let i = index" [formGroup]="fg" class="grid">
+  <mat-form-field>
+    <mat-label i18n="@@skills.name">Habilidad</mat-label>
+    <input matInput formControlName="name" required placeholder="Ej: Python, SQL, Angular" i18n-placeholder="@@skills.namePlaceholder">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label i18n="@@skills.level">Nivel</mat-label>
+    <mat-select formControlName="level" required placeholder="Seleccionar" i18n-placeholder="@@skills.levelPlaceholder">
+      <mat-option *ngFor="let lv of levels" [value]="lv">{{ lv }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button mat-button color="warn" (click)="remove.emit(i)" i18n="@@skills.remove">Eliminar</button>
+  <hr>
+</div>
+
+<button mat-stroked-button color="primary" (click)="add.emit()" i18n="@@skills.add">Agregar habilidad</button>

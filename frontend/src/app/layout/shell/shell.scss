@@ -1,0 +1,71 @@
+// Variables (idénticas al login)
+$color-primary: #74b9ff;
+$color-primary-dark: #0984e3;
+$color-bg-start: #74ebd5;
+$color-bg-end:   #ACB6E5;
+$color-text:     #333;
+$color-subtext:  #666;
+
+.nav-wrap {
+  background: linear-gradient(135deg, $color-bg-start, $color-bg-end);
+  color: $color-text;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+}
+
+.brand {
+  display: flex; align-items: center; gap: .5rem;
+  color: $color-text; text-decoration: none; font-weight: 700; font-size: 1.2rem;
+  &:hover { color: $color-primary-dark; }
+  .logo { font-size: 1.2rem; }
+}
+
+.menu {
+  display: flex; gap: 1rem; list-style: none; margin: 0;
+  a {
+    color: $color-text; text-decoration: none; padding: 0.25rem 0; font-weight: 500;
+    &.active { border-bottom: 2px solid $color-primary; color: $color-primary-dark; }
+    &:hover  { color: $color-primary-dark; }
+  }
+}
+
+.actions {
+  .btn.logout {
+    background: $color-primary; color: #fff; border: none;
+    padding: .45rem .85rem; border-radius: 6px; font-weight: 600; cursor: pointer;
+    transition: background .2s ease;
+    &:hover { background: $color-primary-dark; }
+  }
+}
+
+.hamb {
+  display: none; flex-direction: column; gap: 4px; background: none; border: 0; cursor: pointer;
+  span { width: 22px; height: 3px; background: $color-text; border-radius: 2px; display: block; }
+}
+
+.drawer {
+  display: none; flex-direction: column;
+  background: linear-gradient(135deg, $color-bg-start, $color-bg-end);
+  padding: .5rem 1rem;
+  a, button {
+    color: $color-text; text-decoration: none; padding: .5rem 0; background: none; border: 0; text-align: left; font-size: 1rem;
+    &:hover { color: $color-primary-dark; }
+  }
+  &.open { display: flex; }
+}
+
+@media (max-width: 768px) {
+  .menu { display: none; }
+  .hamb { display: flex; }
+}
+
+.page {
+  min-height: calc(100vh - 64px);
+  background: #f7f9fc; // fondo claro para contrastar con la navbar
+  padding: 24px;
+}

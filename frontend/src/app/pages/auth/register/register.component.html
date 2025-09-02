@@ -1,0 +1,77 @@
+<div class="auth-wrap">
+  <div class="card">
+    <h1 class="app-title" i18n="@@appTitle">— RESUME MAKER —</h1>
+    <h2 class="section-title" i18n="@@registerTitle">Crear cuenta</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <!-- Nombre -->
+      <div class="field">
+        <label class="lbl" for="full_name" i18n="@@fullNameLabel">Nombre completo</label>
+        <input
+          id="full_name"
+          type="text"
+          formControlName="full_name"
+          placeholder="Juan Pérez" i18n-placeholder="@@fullNamePlaceholder"
+          [class.invalid]="form.get('full_name')?.touched && form.get('full_name')?.invalid"
+          autocomplete="name"
+          required
+        />
+        <div class="err" *ngIf="form.get('full_name')?.touched && form.get('full_name')?.invalid">
+          <span *ngIf="form.get('full_name')?.errors?.['required']" i18n="@@fullNameRequired">Nombre requerido</span>
+          <span *ngIf="form.get('full_name')?.errors?.['minlength']" i18n="@@fullNameMinLen">Debe tener al menos 2 caracteres.</span>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="field">
+        <label class="lbl" for="email" i18n="@@emailLabel">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="correo@ejemplo.com" i18n-placeholder="@@emailPlaceholder"
+          [class.invalid]="form.get('email')?.touched && form.get('email')?.invalid"
+          autocomplete="email"
+          required
+        />
+        <div class="err" *ngIf="form.get('email')?.touched && form.get('email')?.invalid">
+          <span *ngIf="form.get('email')?.errors?.['required']" i18n="@@emailRequired">Email requerido</span>
+          <span *ngIf="form.get('email')?.errors?.['email']" i18n="@@emailInvalid">Email inválido.</span>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="field">
+        <label class="lbl" for="password" i18n="@@passwordLabel">Contraseña</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="********" i18n-placeholder="@@passwordPlaceholder"
+          [class.invalid]="form.get('password')?.touched && form.get('password')?.invalid"
+          autocomplete="new-password"
+          required
+        />
+        <div class="err" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+          <span *ngIf="form.get('password')?.errors?.['required']" i18n="@@passwordRequired">Contraseña requerida</span>
+          <span *ngIf="form.get('password')?.errors?.['minlength']" i18n="@@passwordMinLen">Debe tener al menos 8 caracteres.</span>
+        </div>
+      </div>
+
+      <!-- Botón -->
+      <button class="btn primary" type="submit" [disabled]="loading || form.invalid" i18n="@@registerCta">
+        Registrarme
+      </button>
+    </form>
+
+    <div class="links">
+      <a routerLink="/auth/login" class="link" i18n="@@goLogin">¿Ya tenés cuenta? Iniciar sesión</a>
+    </div>
+
+    <!-- Error global -->
+    <p class="success-banner" *ngIf="successMsg">{{ successMsg }}</p>
+    <p class="error-banner" *ngIf="errorMsg">{{ errorMsg }}</p>
+  </div>
+   
+  
+</div>

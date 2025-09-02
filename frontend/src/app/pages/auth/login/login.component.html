@@ -1,0 +1,69 @@
+<!-- src/app/pages/login/login.component.html -->
+<div class="auth-wrap">
+  <div class="card">
+    <h1 class="app-title" i18n="@@appTitle">— RESUME MAKER —</h1>
+    <h2 class="section-title" i18n="@@loginTitle">Login</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+      <div class="field">
+        <label class="lbl" for="email" i18n="@@emailLabel">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="you@example.com" i18n-placeholder="@@emailPlaceholder"
+          [class.invalid]="form.controls.email.touched && form.controls.email.invalid"
+          autocomplete="email"
+          required
+        />
+        <div class="err" *ngIf="form.controls.email.touched && form.controls.email.errors">
+          <span *ngIf="form.controls.email.errors['required']" i18n="@@emailRequired">Email requerido</span>
+          <span *ngIf="form.controls.email.errors['email']" i18n="@@emailInvalid">Formato inválido</span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="lbl" for="password" i18n="@@passwordLabel">Password</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="••••••••" i18n-placeholder="@@passwordPlaceholder"
+          [class.invalid]="form.controls.password.touched && form.controls.password.invalid"
+          autocomplete="current-password"
+          required
+        />
+        <div class="err" *ngIf="form.controls.password.touched && form.controls.password.errors">
+          <span *ngIf="form.controls.password.errors['required']" i18n="@@passwordRequired">Password requerida</span>
+          <!-- ojo: Angular usa 'minlength' en minLength validator -->
+          <span *ngIf="form.controls.password.errors?.['minlength']" i18n="@@passwordMinLength">
+                Mínimo 6 caracteres
+              </span>
+        </div>
+      </div>
+
+      <button class="btn primary" type="submit" [disabled]="loading" i18n="@@loginButton">
+        {{ loading ? 'Ingresando...' : 'Login' }}
+      </button>
+    </form>
+
+    <div class="links">
+      <a routerLink="/auth/register" class="link" i18n="@@createAccountLink">Create account</a>
+      <span class="sep">•</span>
+      <a routerLink="/auth/forgot" class="link" i18n="@@forgotPasswordLink">Forgot password</a>
+    </div>
+    <!-- Cartel de cuenta no verificada + botón de reenvío -->
+      <div *ngIf="unverified" class="alert-warn">
+        <div class="title">Tu cuenta no está verificada</div>
+        <p>
+          Revisá tu correo (y spam). Si no te llegó, podés reenviar el enlace.
+          <button class="btn-link"
+                  (click)="resend()"
+                  [disabled]="resendLoading || cooldownSeconds > 0">
+            {{ resendLoading ? 'Enviando...' : (cooldownSeconds > 0 ? 'Reenviar (' + cooldownSeconds + 's)' : 'Reenviar verificación') }}
+          </button>
+        </p>
+      </div>
+    <p class="error-banner" *ngIf="errorMsg">{{ errorMsg }}</p>
+  </div>
+</div>

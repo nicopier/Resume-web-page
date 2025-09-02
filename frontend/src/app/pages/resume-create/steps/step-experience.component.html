@@ -1,0 +1,34 @@
+<div *ngFor="let fg of array.controls; let i = index" [formGroup]="fg" class="grid">
+  <mat-form-field class="w100">
+    <mat-label i18n="@@experience.company">Empresa</mat-label>
+    <input matInput formControlName="company" required placeholder="Ej: OpenAI" i18n-placeholder="@@experience.companyPlaceholder">
+  </mat-form-field>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@experience.role">Puesto</mat-label>
+    <input matInput formControlName="role" required placeholder="Ej: Desarrollador Backend" i18n-placeholder="@@experience.rolePlaceholder">
+  </mat-form-field>
+
+  <!-- PERÍODO (Inicio/Fin) con un solo picker -->
+  <mat-form-field class="w100">
+    <mat-label i18n="@@experience.period">Período</mat-label>
+    <mat-date-range-input [rangePicker]="expRangePicker">
+      <input matStartDate formControlName="start" placeholder="Inicio" i18n-placeholder="@@experience.startPlaceholder">
+      <input matEndDate formControlName="end" [disabled]="fg.get('current')?.value" placeholder="Fin" i18n-placeholder="@@experience.endPlaceholder">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix [for]="expRangePicker"></mat-datepicker-toggle>
+    <mat-date-range-picker #expRangePicker></mat-date-range-picker>
+  </mat-form-field>
+
+  <mat-checkbox formControlName="current" i18n="@@experience.current">Trabajo actual</mat-checkbox>
+
+  <mat-form-field class="w100">
+    <mat-label i18n="@@experience.description">Descripción / Logros</mat-label>
+    <textarea matInput formControlName="description" rows="3" placeholder="Ej: Lideré un equipo de 4 personas..." i18n-placeholder="@@experience.descriptionPlaceholder"></textarea>
+  </mat-form-field>
+
+  <button mat-button color="warn" (click)="remove.emit(i)" i18n="@@experience.remove">Eliminar</button>
+  <hr>
+</div>
+
+<button mat-stroked-button color="primary" (click)="add.emit()" i18n="@@experience.add">Agregar experiencia</button>
