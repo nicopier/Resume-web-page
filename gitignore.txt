@@ -1,24 +1,32 @@
-# Angular specific
-/dist/
-/out-tsc/
-/tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
+# ----- Raíz / OS / IDE -----
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ----- Angular / Frontend -----
+# Si tu app vive en ./frontend
+frontend/dist/
+frontend/out-tsc/
+frontend/tmp/
+frontend/coverage/
+frontend/.angular/
+frontend/.angular/cache/
+frontend/node_modules/
+# Locks (opcional: si querés versionar uno, quitá esa línea)
+frontend/package-lock.json
+frontend/yarn.lock
+
+# Si además tenés Angular en la raíz (por si acaso)
+dist/
+out-tsc/
+tmp/
+coverage/
 .angular/
-
-# Node modules and dependency files
-/node_modules/
-/package-lock.json
-/yarn.lock
-
-# Environment files
-/.venv
-/.env
-
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
+.angular/cache/
+node_modules/
+package-lock.json
+yarn.lock
 
 # TypeScript cache
 *.tsbuildinfo
@@ -28,8 +36,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# --- Python / FastAPI ---
-# Entornos virtuales
+# ----- Python / FastAPI / Backend -----
+# Entornos virtuales (clave: ya lo tenías, pero repetimos por claridad)
 .venv/
 venv/
 
@@ -39,11 +47,21 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Archivos de DB / logs
+# Artefactos/DB/logs
 *.db
 *.sqlite3
 *.log
 
-# Archivos de entorno
-*.env
+# Archivos de entorno / secretos
 .env
+*.env
+
+# Si usás build de Python
+build/
+dist/
+*.egg-info/
+
+# ----- Otros -----
+# Coverage de Python
+htmlcov/
+.coverage*
