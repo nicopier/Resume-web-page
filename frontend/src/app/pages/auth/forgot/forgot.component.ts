@@ -16,16 +16,25 @@ export class ForgotComponent {
 
   loading = false;
   sent = false;
+
+  // ⬇⬇ claves para rate limit
+  rateLimited = false;
+  rateLimitMin = 0;
+
   errorMsg = '';
 
   form = this.fb.group({
     email: ['', [Validators.required, Validators.email]],
   });
-
   get f() { return this.form.controls; }
 
   submit() {
+    // limpiar todo antes de llamar
     this.errorMsg = '';
+    this.sent = false;
+    this.rateLimited = false;
+    this.rateLimitMin = 0;
+
     if (this.form.invalid) {
       this.form.markAllAsTouched();
       return;
@@ -36,14 +45,33 @@ export class ForgotComponent {
 
     this.auth.forgotPassword({ email }).subscribe({
       next: () => {
-        this.sent = true;       // mostramos mensaje “si existe, te mandamos el enlace”
         this.loading = false;
+        this.sent = true; // 204 OK
       },
-      error: () => {
-        // el backend devuelve 204 aunque el mail no exista; solo mostramos si falla la red/servidor
-        this.errorMsg = 'No se pudo enviar el enlace. Intentá nuevamente.';
+      error: (err) => {
         this.loading = false;
-      },
+
+        // payload puede venir como {detail:{...}} o plano
+        const payload = err?.error ?? {};
+        const detail  = (payload && typeof payload.detail === 'object') ? payload.detail : null;
+
+        const code    = (detail?.code ?? payload?.code) as string | undefined;
+        const minutes = Number(detail?.minutes ?? payload?.minutes ?? NaN);
+
+        if (err?.status === 429 && code === 'FORGOT_RATE_LIMIT') {
+          this.rateLimited  = true;
+          this.rateLimitMin = Number.isFinite(minutes) ? minutes : 5;
+          this.sent = false;
+          this.errorMsg = '';   // evita [object Object]
+          return;
+        }
+
+        // fallback legible
+        if (typeof payload === 'string') this.errorMsg = payload;
+        else if (typeof payload?.detail === 'string') this.errorMsg = payload.detail;
+        else this.errorMsg = 'No se pudo enviar el enlace. Intentá nuevamente.';
+      }
+,
     });
   }
 }

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Observable, of } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { AbstractControl, ReactiveFormsModule, Validators, FormBuilder, FormGroup, ValidationErrors } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
 
 type RegisterDTO = { full_name: string; email: string; password: string };
@@ -11,7 +11,7 @@ type RegisterDTO = { full_name: string; email: string; password: string };
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink],
   templateUrl: './register.component.html',
   styleUrls: ['./register.scss'],
 })

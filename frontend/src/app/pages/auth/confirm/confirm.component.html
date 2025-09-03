@@ -2,44 +2,52 @@
   <div class="card">
     <div class="header">
       <div class="logo-circle">✔</div>
-      <h1>Verificación de cuenta</h1>
-      <p class="subtitle">Gracias por registrarte en <strong>Resume Interactivo</strong>.</p>
+      <h1 i18n="@@verifyTitle">Verificación de cuenta</h1>
+      <p class="subtitle" i18n="@@verifySubtitle">
+        Gracias por registrarte en <strong>Resume Interactivo</strong>.
+      </p>
     </div>
 
     <!-- Verificando -->
     <div *ngIf="status === 'verifying'" class="state verifying">
       <div class="spinner"></div>
-      <p>Verificando tu cuenta…</p>
-      <p class="hint">Esto puede tardar unos segundos.</p>
+      <p i18n="@@verifyingText">Verificando tu cuenta…</p>
+      <p class="hint" i18n="@@verifyingHint">Esto puede tardar unos segundos.</p>
     </div>
 
     <!-- Éxito -->
     <div *ngIf="status === 'success'" class="state success">
       <div class="icon success">🎉</div>
-      <h2>¡Listo!</h2>
+      <h2 i18n="@@successTitle">¡Listo!</h2>
       <p>{{ message }}</p>
       <div class="meta">
-        <span>ID de usuario:</span>
+        <span i18n="@@userIdLabel">ID de usuario:</span>
         <code>{{ userId }}</code>
       </div>
-      <button class="btn btn-primary" (click)="goLogin()">Ir a iniciar sesión</button>
+      <button class="btn btn-primary" (click)="goLogin()" i18n="@@goLoginBtn">
+        Ir a iniciar sesión
+      </button>
     </div>
 
     <!-- Error -->
     <div *ngIf="status === 'error'" class="state error">
       <div class="icon error">⚠</div>
-      <h2>Ups…</h2>
+      <h2 i18n="@@errorTitle">Ups…</h2>
       <p>{{ message }}</p>
-      <button class="btn" (click)="goLogin()">Volver al login</button>
+      <button class="btn" (click)="goLogin()" i18n="@@backToLoginBtn">
+        Volver al login
+      </button>
     </div>
 
     <!-- Idle (debug/placeholder) -->
     <div *ngIf="status === 'idle'" class="state idle">
-      <p>Token listo para verificar.</p>
+      <p i18n="@@idleText">Token listo para verificar.</p>
     </div>
 
     <div class="footer">
-      <small>Si tenés problemas, solicitá un nuevo correo de verificación.</small>
+      <small i18n="@@footerHelp">
+        Si tenés problemas, solicitá un nuevo correo de verificación.
+      </small>
     </div>
   </div>
 </div>

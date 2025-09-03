@@ -27,7 +27,7 @@ class User(Base):
     is_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("0"))
     verified_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     last_verification_sent: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
-    
+    last_password_reset_sent:  Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     created_at: Mapped[datetime] = mapped_column(
         DateTime, server_default=func.now(), nullable=False
     )

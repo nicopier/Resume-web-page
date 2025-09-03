@@ -4,9 +4,15 @@
     Escribí tu email y te enviaremos un enlace para restablecerla.
   </p>
 
-  <form [formGroup]="form" (ngSubmit)="submit()">
+  <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
     <label for="email" i18n="@@forgot.label.email">Email</label>
-    <input id="email" type="email" formControlName="email" />
+    <input
+      id="email"
+      type="email"
+      formControlName="email"
+      [class.invalid]="f.email.touched && f.email.invalid"
+      autocomplete="email"
+    />
 
     <div class="err" *ngIf="f.email.touched && f.email.invalid">
       <span *ngIf="f.email.errors?.['required']" i18n="@@forgot.error.required">
@@ -17,17 +23,25 @@
       </span>
     </div>
 
-    <button type="submit" [disabled]="loading" i18n="@@forgot.button">
-      {{ loading ? 'Enviando...' : 'Enviar enlace' }}
+    <button type="submit" [disabled]="loading || form.invalid">
+      <ng-container *ngIf="!loading" i18n="@@forgot.button">Enviar enlace</ng-container>
+      <ng-container *ngIf="loading" i18n="@@forgot.sending">Enviando…</ng-container>
     </button>
   </form>
 
-  <div class="ok" *ngIf="sent" i18n="@@forgot.success">
+  <!-- éxito (cuando el backend responde 204) -->
+  <div class="ok" *ngIf="sent && !rateLimited" i18n="@@forgot.success">
     Si el email existe, te enviamos un enlace para restablecer la contraseña.
     Revisá tu bandeja de entrada y Spam.
   </div>
 
-  <div class="err" *ngIf="errorMsg" i18n="@@forgot.fail">
+  <!-- rate limit (429 con { code:'FORGOT_RATE_LIMIT', minutes }) -->
+  <div class="err" *ngIf="rateLimited" i18n="@@forgot.rateLimited">
+    Debes esperar {{ rateLimitMin }} minutos antes de volver a pedir el enlace.
+  </div>
+
+  <!-- error genérico -->
+  <div class="err" *ngIf="!rateLimited && errorMsg">
     {{ errorMsg }}
   </div>
 </div>
