@@ -1,0 +1,98 @@
+<div class="page-wrapper">
+
+  <!-- Barra de controles (se oculta al imprimir) -->
+  <div class="controls no-print">
+    <button class="btn-back" (click)="back()">← Volver</button>
+    <button class="btn-print" (click)="print()">Imprimir / Guardar PDF</button>
+  </div>
+
+  <!-- Estado de carga -->
+  @if (loading()) {
+    <div class="status-msg">Cargando...</div>
+  } @else if (error()) {
+    <div class="status-msg error">{{ error() }}</div>
+  } @else {
+  @if (doc(); as d) {
+
+    <div class="resume">
+
+      <!-- Encabezado -->
+      <header class="resume-header">
+        <h1>{{ d.data.informacion_personal.full_name }}</h1>
+        <div class="contact-line">
+          <span>{{ d.data.informacion_personal.email }}</span>
+          @if (d.data.informacion_personal.phone) {
+            <span class="sep">·</span>
+            <span>{{ d.data.informacion_personal.phone }}</span>
+          }
+          @if (d.data.informacion_personal.location) {
+            <span class="sep">·</span>
+            <span>{{ d.data.informacion_personal.location }}</span>
+          }
+        </div>
+      </header>
+
+      <!-- Sobre mí -->
+      @if (d.data.introduccion.about) {
+        <section class="resume-section">
+          <h2>Sobre mí</h2>
+          <p>{{ d.data.introduccion.about }}</p>
+        </section>
+      }
+
+      <!-- Experiencia -->
+      @if (d.data.experiencia.length > 0) {
+        <section class="resume-section">
+          <h2>Experiencia</h2>
+          @for (exp of d.data.experiencia; track exp.company) {
+            <div class="entry">
+              <div class="entry-top">
+                <span class="entry-title">{{ exp.role }}</span>
+                <span class="entry-org">{{ exp.company }}</span>
+                <span class="entry-dates">
+                  {{ exp.start }} – {{ exp.current ? 'Presente' : exp.end }}
+                </span>
+              </div>
+              @if (exp.description) {
+                <p class="entry-desc">{{ exp.description }}</p>
+              }
+            </div>
+          }
+        </section>
+      }
+
+      <!-- Educación -->
+      @if (d.data.estudios.length > 0) {
+        <section class="resume-section">
+          <h2>Educación</h2>
+          @for (edu of d.data.estudios; track edu.school) {
+            <div class="entry">
+              <div class="entry-top">
+                <span class="entry-title">{{ edu.degree }}</span>
+                <span class="entry-org">{{ edu.school }}</span>
+                <span class="entry-dates">
+                  {{ edu.start }} – {{ edu.still ? 'En curso' : edu.end }}
+                </span>
+              </div>
+            </div>
+          }
+        </section>
+      }
+
+      <!-- Skills -->
+      @if (d.data.skills.length > 0) {
+        <section class="resume-section">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            @for (skill of d.data.skills; track skill.name) {
+              <span class="skill-tag">{{ skill.name }} <em>{{ skill.level }}</em></span>
+            }
+          </div>
+        </section>
+      }
+
+    </div>
+  }
+  }
+
+</div>

@@ -1,0 +1,212 @@
+// ── Resume View (pantalla + impresión) ───────────────────────────────────────
+
+// ── Pantalla ─────────────────────────────────────────────────────────────────
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--bg-base);
+  background-image:
+    radial-gradient(ellipse 50% 40% at 10% 20%, rgba(124, 58, 237, 0.08), transparent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px 64px;
+}
+
+.status-msg {
+  margin-top: 80px;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  &.error { color: var(--error); }
+}
+
+// Barra de controles (solo pantalla)
+.controls {
+  width: 100%;
+  max-width: 820px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+
+  .btn-back {
+    padding: 0.45rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+    &:hover { color: var(--text-primary); border-color: rgba(255,255,255,0.2); }
+  }
+
+  .btn-print {
+    padding: 0.45rem 1.1rem;
+    background: var(--gradient);
+    border: none;
+    color: #fff;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity var(--transition);
+    &:hover { opacity: 0.85; }
+  }
+}
+
+// ── Hoja del CV (pantalla) ────────────────────────────────────────────────────
+.resume {
+  background: #ffffff;
+  color: #1a1a1a;
+  width: 100%;
+  max-width: 820px;
+  padding: 52px 60px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+// Encabezado del CV
+.resume-header {
+  border-bottom: 2.5px solid #7c3aed;
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+
+  h1 {
+    margin: 0 0 8px;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #0d0d1a;
+  }
+
+  .contact-line {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 0.84rem;
+    color: #555;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    align-items: center;
+
+    .sep { color: #ccc; }
+  }
+}
+
+// Secciones del CV
+.resume-section {
+  margin-bottom: 28px;
+
+  h2 {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #7c3aed;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 6px;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin: 0;
+    color: #374151;
+  }
+}
+
+// Entradas (experiencia / educación)
+.entry {
+  margin-bottom: 16px;
+  &:last-child { margin-bottom: 0; }
+}
+
+.entry-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 4px;
+
+  .entry-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #111827;
+  }
+
+  .entry-org {
+    font-style: italic;
+    color: #6b7280;
+    &::before { content: '—'; margin-right: 4px; color: #d1d5db; }
+  }
+
+  .entry-dates {
+    margin-left: auto;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.78rem;
+    color: #9ca3af;
+    white-space: nowrap;
+  }
+}
+
+.entry-desc {
+  margin: 0;
+  color: #4b5563;
+  font-size: 0.9rem;
+}
+
+// Skills
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background: #f3f0ff;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+  border-radius: 4px;
+  padding: 4px 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.82rem;
+
+  em {
+    color: #9ca3af;
+    font-style: normal;
+    margin-left: 4px;
+    font-size: 0.78rem;
+  }
+}
+
+// ── Impresión ─────────────────────────────────────────────────────────────────
+@media print {
+  .no-print { display: none !important; }
+
+  .page-wrapper {
+    background: none;
+    padding: 0;
+    display: block;
+  }
+
+  .resume {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    max-width: none;
+    font-size: 10.5pt;
+  }
+
+  .resume-header h1 { font-size: 22pt; }
+  .resume-section h2 { font-size: 8pt; }
+  .entry { page-break-inside: avoid; }
+  .resume-section { page-break-inside: avoid; }
+
+  @page {
+    size: A4;
+    margin: 18mm 20mm;
+  }
+}

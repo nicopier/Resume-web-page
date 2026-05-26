@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { environment } from '../../../../environments/environment';
 interface LoginForm {
   email: FormControl<string>;
   password: FormControl<string>;
@@ -42,7 +43,7 @@ export class LoginComponent {
     this.unverified = false;
 
     try {
-      const res = await fetch('http://localhost:8000/auth/login', {
+      const res = await fetch(`${environment.apiUrl}/auth/login`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(this.form.getRawValue()),
@@ -89,7 +90,7 @@ export class LoginComponent {
 
     this.resendLoading = true;
     try {
-      const res = await fetch('http://localhost:8000/auth/resend-confirm', {
+      const res = await fetch(`${environment.apiUrl}/auth/resend-confirm`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email }),

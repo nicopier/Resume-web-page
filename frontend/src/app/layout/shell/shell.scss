@@ -1,71 +1,162 @@
-// Variables (idénticas al login)
-$color-primary: #74b9ff;
-$color-primary-dark: #0984e3;
-$color-bg-start: #74ebd5;
-$color-bg-end:   #ACB6E5;
-$color-text:     #333;
-$color-subtext:  #666;
+// ── Shell / Navbar ───────────────────────────────────────────────────────────
 
 .nav-wrap {
-  background: linear-gradient(135deg, $color-bg-start, $color-bg-end);
-  color: $color-text;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: rgba(15, 17, 23, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 58px;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+// Logo
 .brand {
-  display: flex; align-items: center; gap: .5rem;
-  color: $color-text; text-decoration: none; font-weight: 700; font-size: 1.2rem;
-  &:hover { color: $color-primary-dark; }
-  .logo { font-size: 1.2rem; }
-}
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
 
-.menu {
-  display: flex; gap: 1rem; list-style: none; margin: 0;
-  a {
-    color: $color-text; text-decoration: none; padding: 0.25rem 0; font-weight: 500;
-    &.active { border-bottom: 2px solid $color-primary; color: $color-primary-dark; }
-    &:hover  { color: $color-primary-dark; }
+  .logo { font-size: 1.1rem; }
+
+  .brand-text {
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
 
+// Links de navegación
+.menu {
+  display: flex;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: color var(--transition), background var(--transition);
+
+    &:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+
+    &.active {
+      color: var(--text-primary);
+      background: rgba(124, 58, 237, 0.15);
+      // línea inferior violet
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: var(--gradient);
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+// Botón logout
 .actions {
   .btn.logout {
-    background: $color-primary; color: #fff; border: none;
-    padding: .45rem .85rem; border-radius: 6px; font-weight: 600; cursor: pointer;
-    transition: background .2s ease;
-    &:hover { background: $color-primary-dark; }
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.38rem 0.9rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition), background var(--transition);
+
+    &:hover {
+      color: var(--error);
+      border-color: rgba(239, 68, 68, 0.4);
+      background: rgba(239, 68, 68, 0.06);
+    }
   }
 }
 
+// Hamburguesa (mobile)
 .hamb {
-  display: none; flex-direction: column; gap: 4px; background: none; border: 0; cursor: pointer;
-  span { width: 22px; height: 3px; background: $color-text; border-radius: 2px; display: block; }
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: 4px;
+
+  span {
+    width: 20px;
+    height: 2px;
+    background: var(--text-secondary);
+    border-radius: 2px;
+    display: block;
+    transition: background var(--transition);
+  }
+
+  &:hover span { background: var(--text-primary); }
 }
 
+// Menú drawer mobile
 .drawer {
-  display: none; flex-direction: column;
-  background: linear-gradient(135deg, $color-bg-start, $color-bg-end);
-  padding: .5rem 1rem;
+  display: none;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border);
+  padding: 0.5rem 1.5rem 1rem;
+  gap: 2px;
+
   a, button {
-    color: $color-text; text-decoration: none; padding: .5rem 0; background: none; border: 0; text-align: left; font-size: 1rem;
-    &:hover { color: $color-primary-dark; }
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.6rem 0.5rem;
+    background: none;
+    border: 0;
+    text-align: left;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: color var(--transition), background var(--transition);
+
+    &:hover { color: var(--text-primary); background: rgba(255, 255, 255, 0.05); }
+    &.active { color: var(--text-primary); }
   }
+
   &.open { display: flex; }
 }
 
-@media (max-width: 768px) {
-  .menu { display: none; }
+@media (max-width: 680px) {
+  .menu, .actions { display: none; }
   .hamb { display: flex; }
 }
 
+// ── Contenido principal ──────────────────────────────────────────────────────
 .page {
-  min-height: calc(100vh - 64px);
-  background: #f7f9fc; // fondo claro para contrastar con la navbar
-  padding: 24px;
+  min-height: calc(100vh - 58px);
+  background: var(--bg-base);
 }

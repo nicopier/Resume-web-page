@@ -1,39 +1,58 @@
-
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
 html {
   @include mat.theme((
     color: (
-      primary: mat.$magenta-palette,
-      tertiary: mat.$violet-palette,
+      primary: mat.$violet-palette,
+      tertiary: mat.$cyan-palette,
     ),
     typography: Roboto,
     density: 0,
   ));
 }
 
-body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
-
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
-  margin: 0;
+// ── Design tokens ────────────────────────────────────────────────────────────
+:root {
+  --bg-base:         #0f1117;
+  --bg-surface:      #1a1b26;
+  --bg-card:         #1e2030;
+  --border:          rgba(255, 255, 255, 0.08);
+  --border-focus:    rgba(124, 58, 237, 0.55);
+  --accent:          #7c3aed;
+  --accent-2:        #06b6d4;
+  --gradient:        linear-gradient(135deg, #7c3aed, #06b6d4);
+  --text-primary:    #e2e8f0;
+  --text-secondary:  #94a3b8;
+  --text-muted:      #64748b;
+  --error:           #ef4444;
+  --success:         #10b981;
+  --warn:            #f59e0b;
+  --radius:          10px;
+  --radius-sm:       6px;
+  --shadow:          0 4px 24px rgba(0, 0, 0, 0.5);
+  --transition:      0.2s ease;
 }
-/* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// ── Reset & base ─────────────────────────────────────────────────────────────
+html, body { height: 100%; margin: 0; }
+
+body {
+  color-scheme: dark;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  font-family: 'Roboto', 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+// ── Angular Material dark overrides ──────────────────────────────────────────
+.mat-mdc-table {
+  background: var(--bg-surface) !important;
+  color: var(--text-primary) !important;
+}
+.mat-mdc-header-row { background: var(--bg-card) !important; }
+.mat-mdc-header-cell { color: var(--text-secondary) !important; font-weight: 600; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; border-bottom-color: var(--border) !important; }
+.mat-mdc-cell { color: var(--text-primary) !important; border-bottom-color: var(--border) !important; }
+.mat-mdc-row:hover { background: rgba(124, 58, 237, 0.06) !important; }
+
+// Snackbar dark
+.mdc-snackbar__surface { background: var(--bg-card) !important; color: var(--text-primary) !important; border: 1px solid var(--border) !important; }

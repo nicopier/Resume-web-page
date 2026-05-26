@@ -120,6 +120,21 @@ def list_my_resumes(db: Session = Depends(get_db), user=Depends(get_current_user
         for r in rows
     ]
 
+@router.get("/{resume_id}", response_model=ResumeDocOut)
+def get_resume(
+    resume_id: int,
+    db: Session = Depends(get_db),
+    current: User = Depends(get_current_user),
+):
+    doc = db.query(ResumeDoc).filter(
+        ResumeDoc.id == resume_id,
+        ResumeDoc.user_id == current.id,
+    ).first()
+    if not doc:
+        raise HTTPException(status_code=404, detail="Resume not found")
+    return doc
+
+
 @router.delete("/{resume_id}", status_code=status.HTTP_204_NO_CONTENT)
 def delete_resume(
     resume_id: int,

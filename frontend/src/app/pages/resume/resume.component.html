@@ -1,50 +1,61 @@
-<div class="p-4">
-  <h2 class="mb-4" i18n>Mis Resumes</h2>
+<div class="resume-page">
 
-  <div *ngIf="loading(); else tabla" i18n>Cargando...</div>
+  <!-- Header -->
+  <div class="page-header">
+    <h2 i18n>Mis CVs</h2>
+    <a class="btn-new" [routerLink]="['/resume/new']" i18n>+ Crear nuevo</a>
+  </div>
 
-  <ng-template #tabla>
-    <div *ngIf="data().length === 0; else conDatos" class="empty">
-      <p i18n>Todavía no creaste ningún resume.</p>
-      <a mat-stroked-button color="primary" [routerLink]="['/crear-resume']" i18n>
-        Crear Resume
-      </a>
+  @if (loading()) {
+    <p class="status" i18n>Cargando...</p>
+  } @else if (data().length === 0) {
+    <div class="empty-state">
+      <div class="empty-icon">📄</div>
+      <p i18n>Todavía no creaste ningún CV.</p>
+      <a class="btn-new" [routerLink]="['/resume/new']" i18n>Crear mi primer CV</a>
     </div>
-
-    <ng-template #conDatos>
-      <table mat-table [dataSource]="data()" class="mat-elevation-z2 full-width">
+  } @else {
+    <div class="table-wrap">
+      <table mat-table [dataSource]="data()">
 
         <!-- ID -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef i18n>CV</th>
-          <td mat-cell *matCellDef="let r">#{{ r.id }}</td>
+          <td mat-cell *matCellDef="let r">
+            <span class="cv-id">#{{ r.id }}</span>
+          </td>
         </ng-container>
 
         <!-- Actualizado -->
         <ng-container matColumnDef="updated">
-          <th mat-header-cell *matHeaderCellDef i18n>Actualizado</th>
-          <td mat-cell *matCellDef="let r">{{ r.updated_at | date:'short' }}</td>
+          <th mat-header-cell *matHeaderCellDef i18n>Última edición</th>
+          <td mat-cell *matCellDef="let r">
+            <span class="date-text">{{ r.updated_at | date:'dd/MM/yyyy' }}</span>
+          </td>
         </ng-container>
 
         <!-- Acciones -->
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef i18n>Acciones</th>
-          <td mat-cell *matCellDef="let r" class="actions">
-            <button mat-stroked-button color="primary" (click)="editar(r.id)" i18n>
-              <mat-icon>edit</mat-icon>&nbsp;Editar
-            </button>
-            <button mat-stroked-button (click)="descargar(r.id)" i18n>
-              <mat-icon>download</mat-icon>&nbsp;Descargar
-            </button>
-            <button mat-stroked-button color="warn" (click)="eliminar(r.id)" i18n>
-              <mat-icon>delete</mat-icon>&nbsp;Eliminar
-            </button>
+          <td mat-cell *matCellDef="let r">
+            <div class="row-actions">
+              <button class="btn-action edit" (click)="editar(r.id)" i18n>
+                <mat-icon>edit</mat-icon> Editar
+              </button>
+              <button class="btn-action download" (click)="descargar(r.id)" i18n>
+                <mat-icon>download</mat-icon> Descargar
+              </button>
+              <button class="btn-action delete" (click)="eliminar(r.id)" i18n>
+                <mat-icon>delete</mat-icon> Eliminar
+              </button>
+            </div>
           </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
-    </ng-template>
-  </ng-template>
+    </div>
+  }
+
 </div>

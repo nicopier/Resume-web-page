@@ -4,7 +4,7 @@ from datetime import datetime
 from typing import Optional
 
 from sqlalchemy.orm import declarative_base, Mapped, mapped_column, relationship
-from sqlalchemy import String, Integer, DateTime, JSON, func, ForeignKey, UniqueConstraint, Index, Boolean, text
+from sqlalchemy import String, Integer, DateTime, JSON, func, ForeignKey, Index, Boolean, text
 
 Base = declarative_base()
 
@@ -61,7 +61,12 @@ class ResumeDoc(Base):
     )
     
     __table_args__ = (
-        #this makes user_id locale and is_current combination repeated
-        UniqueConstraint("user_id", "locale", "is_current", name="uq_user_locale_current"),
+        # Sólo una versión activa por usuario/idioma (partial index, soportado por PostgreSQL)
+        Index(
+            "uq_user_locale_current",
+            "user_id", "locale",
+            unique=True,
+            postgresql_where=text("is_current IS TRUE"),
+        ),
         Index("ix_user_locale_version", "user_id", "locale", "version"),
     )

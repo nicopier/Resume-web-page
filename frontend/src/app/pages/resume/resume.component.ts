@@ -5,7 +5,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { ResumeService } from '../../services//resume.service'; // ajusta la ruta real
+import { ResumeService } from '../../services/resume.service';
 import { ResumeItem } from '../../models/resume.models';
 
 @Component({
@@ -34,9 +34,14 @@ export class ResumeComponent implements OnInit {
   cargar(): void {
     this.loading.set(true);
     this.svc.listMine().subscribe({
-      next: (res) => this.data.set(res ?? []),
-      error: () => this.snack.open('No se pudieron cargar tus resumes', 'Cerrar', { duration: 3000 }),
-      complete: () => this.loading.set(false),
+      next: (res) => {
+        this.data.set(res ?? []);
+        this.loading.set(false);
+      },
+      error: () => {
+        this.loading.set(false);
+        this.snack.open('No se pudieron cargar tus resumes', 'Cerrar', { duration: 3000 });
+      },
     });
   }
 
@@ -46,10 +51,7 @@ export class ResumeComponent implements OnInit {
   }
 
   descargar(id: number): void {
-    // Placeholder por ahora
-    this.snack.open('Descarga: disponible próximamente', 'Ok', { duration: 2500 });
-    // Cuando implementes el backend de descarga, acá iría:
-    // this.svc.download(id).subscribe(...)
+    this.router.navigate(['/resume/view', id]);
   }
 
   eliminar(id: number): void {

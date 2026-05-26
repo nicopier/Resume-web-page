@@ -13,6 +13,13 @@ export const routes: Routes = [
   { path: 'reset-password', loadComponent: () => import('./pages/auth/reset/reset-password.component').then(m => m.ResetPasswordComponent) },
   { path: 'auth/confirm',  loadComponent: () => import('./pages/auth/confirm/confirm.component').then(m => m.ConfirmComponent) },
 
+  // Vista de CV para impresión (sin Shell, requiere auth)
+  {
+    path: 'resume/view/:id',
+    canMatch: [authGuard],
+    loadComponent: () => import('./pages/resume-view/resume-view.component').then(m => m.ResumeViewComponent),
+  },
+
   // 2) Redirect raíz
   { path: '', pathMatch: 'full', redirectTo: 'auth/login' },
 

@@ -8,15 +8,25 @@ ENV_PATH = ROOT_DIR / ".env"
 
 class Settings(BaseSettings):
     # ---- DB ----
+    # Render provee DATABASE_URL directamente; en local usamos los campos individuales
+    DATABASE_URL: str | None = None
     DB_HOST: str = "localhost"
-    DB_PORT: int = 3306
+    DB_PORT: int = 5432
     DB_NAME: str = "resume_app"
-    DB_USER: str = "cuenta_servicio"
-    DB_PASSWORD: str = "cuenta_servicio"
+    DB_USER: str = "postgres"
+    DB_PASSWORD: str = "postgres"
 
     @property
     def DB_URL(self) -> str:
-        return f"mysql+pymysql://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+        if self.DATABASE_URL:
+            url = self.DATABASE_URL
+            # Render usa postgres:// pero psycopg2 necesita postgresql+psycopg2://
+            if url.startswith("postgres://"):
+                url = url.replace("postgres://", "postgresql+psycopg2://", 1)
+            elif url.startswith("postgresql://") and "+psycopg2" not in url:
+                url = url.replace("postgresql://", "postgresql+psycopg2://", 1)
+            return url
+        return f"postgresql+psycopg2://{self.DB_USER}:{self.DB_PASSWORD}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
     # ---- Seguridad / Tokens ----
     SECRET_KEY: str = "dev-secret-change-me"

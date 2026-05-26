@@ -45,6 +45,21 @@ export interface Skill {
   level: string; // "Básico" | "Intermedio" | "Avanzado"
 }
 
+// Respuesta completa del backend (incluye data)
+export interface ResumeDocOut {
+  id: number;
+  locale: string;
+  version: number;
+  is_current: boolean;
+  data: {
+    informacion_personal: InformacionPersonal;
+    introduccion: Introduccion;
+    estudios: Estudio[];
+    experiencia: Experiencia[];
+    skills: Skill[];
+  };
+}
+
 // Payload completo
 export interface ResumePayload {
   data: {
@@ -71,15 +86,8 @@ export class ResumeService {
     return this.http.get<ResumeItem[]>(`${this.api}/resume/me`);
   }
 
-  getOne(id: number) {
-    // GET /resume/{id}
-    return this.http.get<ResumeItem>(`${this.api}/resume/${id}`);
-  }
-
-  download(id: number) {
-    // Placeholder (cuando implementes export, cambiamos responseType)
-    // GET /resume/{id}/download
-    return this.http.get(`${this.api}/resume/${id}/download`);
+  getById(id: number) {
+    return this.http.get<ResumeDocOut>(`${this.api}/resume/${id}`);
   }
 
   delete(id: number) {

@@ -1,0 +1,12 @@
+fastapi==0.123.5
+uvicorn[standard]==0.30.6
+sqlalchemy>=2.0
+psycopg2-binary
+pydantic==2.12.5
+pydantic-settings==2.12.0
+pydantic[email]
+PyJWT==2.8.0
+python-jose[cryptography]
+passlib[bcrypt]
+itsdangerous==2.2.0
+python-multipart

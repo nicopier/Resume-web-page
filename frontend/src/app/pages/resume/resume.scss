@@ -1,0 +1,139 @@
+// ── Lista de CVs ─────────────────────────────────────────────────────────────
+
+.resume-page {
+  padding: 40px 24px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+// Header de sección
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+}
+
+.btn-new {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.55rem 1.1rem;
+  background: var(--gradient);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: opacity var(--transition), transform var(--transition);
+
+  &:hover { opacity: 0.88; transform: translateY(-1px); }
+}
+
+// Estado de carga / vacío
+.status {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding: 16px 0;
+}
+
+// Estado vacío
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 64px 0;
+  color: var(--text-secondary);
+  text-align: center;
+
+  .empty-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+  }
+
+  p {
+    margin: 0;
+    font-size: 1rem;
+  }
+}
+
+// Tabla wrapper
+.table-wrap {
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+// Acciones de fila
+.row-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0.32rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  background: transparent;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+
+  mat-icon { font-size: 14px; width: 14px; height: 14px; }
+
+  &.edit {
+    color: var(--accent-2);
+    border-color: rgba(6, 182, 212, 0.25);
+    &:hover { background: rgba(6, 182, 212, 0.1); border-color: rgba(6, 182, 212, 0.5); }
+  }
+
+  &.download {
+    color: var(--success);
+    border-color: rgba(16, 185, 129, 0.25);
+    &:hover { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.5); }
+  }
+
+  &.delete {
+    color: var(--error);
+    border-color: rgba(239, 68, 68, 0.25);
+    &:hover { background: rgba(239, 68, 68, 0.1); border-color: rgba(239, 68, 68, 0.5); }
+  }
+}
+
+// ID badge
+.cv-id {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  font-family: monospace;
+}
+
+// Fecha
+.date-text {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
