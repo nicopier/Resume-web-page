@@ -1,5 +1,9 @@
 // ── Resume View (pantalla + impresión) ───────────────────────────────────────
 
+$font-heading:  'Playfair Display', Georgia, serif;
+$font-body:     'Lora', Georgia, serif;
+$font-ui:       'Inter', 'Roboto', sans-serif;
+
 // ── Pantalla ─────────────────────────────────────────────────────────────────
 .page-wrapper {
   min-height: 100vh;
@@ -30,6 +34,7 @@
   gap: 12px;
 
   .btn-back {
+    font-family: $font-ui;
     padding: 0.45rem 1rem;
     background: transparent;
     border: 1px solid var(--border);
@@ -42,6 +47,7 @@
   }
 
   .btn-print {
+    font-family: $font-ui;
     padding: 0.45rem 1.1rem;
     background: var(--gradient);
     border: none;
@@ -55,7 +61,7 @@
   }
 }
 
-// ── Hoja del CV (pantalla) ────────────────────────────────────────────────────
+// ── Hoja del CV ───────────────────────────────────────────────────────────────
 .resume {
   background: #ffffff;
   color: #1a1a1a;
@@ -64,35 +70,39 @@
   padding: 52px 60px;
   border-radius: var(--radius);
   box-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
-  font-family: 'Georgia', 'Times New Roman', serif;
+  font-family: $font-body;
   font-size: 0.95rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 // Encabezado del CV
 .resume-header {
-  border-bottom: 2.5px solid #7c3aed;
-  padding-bottom: 18px;
-  margin-bottom: 28px;
+  border-bottom: 2px solid #7c3aed;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
 
   h1 {
-    margin: 0 0 8px;
-    font-size: 2.1rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
+    margin: 0 0 10px;
+    font-family: $font-heading;
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
     color: #0d0d1a;
+    line-height: 1.1;
   }
 
   .contact-line {
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 0.84rem;
-    color: #555;
+    font-family: $font-ui;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #6b7280;
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
     align-items: center;
+    letter-spacing: 0.01em;
 
-    .sep { color: #ccc; }
+    .sep { color: #d1d5db; }
   }
 }
 
@@ -101,26 +111,27 @@
   margin-bottom: 28px;
 
   h2 {
-    font-family: 'Roboto', 'Arial', sans-serif;
-    font-size: 0.7rem;
+    font-family: $font-ui;
+    font-size: 0.65rem;
     font-weight: 700;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #7c3aed;
     border-bottom: 1px solid #e5e7eb;
-    padding-bottom: 6px;
+    padding-bottom: 7px;
     margin-bottom: 16px;
   }
 
   p {
     margin: 0;
     color: #374151;
+    font-size: 0.93rem;
   }
 }
 
 // Entradas (experiencia / educación)
 .entry {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   &:last-child { margin-bottom: 0; }
 }
 
@@ -129,26 +140,31 @@
   flex-wrap: wrap;
   align-items: baseline;
   gap: 6px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 
   .entry-title {
-    font-weight: 700;
-    font-size: 0.95rem;
+    font-family: $font-body;
+    font-weight: 600;
+    font-size: 0.97rem;
     color: #111827;
   }
 
   .entry-org {
+    font-family: $font-body;
     font-style: italic;
+    font-weight: 400;
     color: #6b7280;
     &::before { content: '—'; margin-right: 4px; color: #d1d5db; }
   }
 
   .entry-dates {
     margin-left: auto;
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.78rem;
+    font-family: $font-ui;
+    font-size: 0.76rem;
+    font-weight: 500;
     color: #9ca3af;
     white-space: nowrap;
+    letter-spacing: 0.02em;
   }
 }
 
@@ -156,6 +172,7 @@
   margin: 0;
   color: #4b5563;
   font-size: 0.9rem;
+  line-height: 1.65;
 }
 
 // Skills
@@ -166,19 +183,22 @@
 }
 
 .skill-tag {
-  background: #f3f0ff;
+  background: #f5f3ff;
   color: #5b21b6;
   border: 1px solid #ddd6fe;
   border-radius: 4px;
   padding: 4px 12px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 0.82rem;
+  font-family: $font-ui;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
 
   em {
-    color: #9ca3af;
+    color: #a78bfa;
     font-style: normal;
-    margin-left: 4px;
-    font-size: 0.78rem;
+    margin-left: 6px;
+    font-size: 0.75rem;
+    font-weight: 400;
   }
 }
 
@@ -198,10 +218,11 @@
     padding: 0;
     max-width: none;
     font-size: 10.5pt;
+    line-height: 1.65;
   }
 
-  .resume-header h1 { font-size: 22pt; }
-  .resume-section h2 { font-size: 8pt; }
+  .resume-header h1 { font-size: 24pt; }
+  .resume-section h2 { font-size: 7.5pt; letter-spacing: 0.16em; }
   .entry { page-break-inside: avoid; }
   .resume-section { page-break-inside: avoid; }
 
