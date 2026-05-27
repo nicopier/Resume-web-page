@@ -1,5 +1,839 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
-  <file id="ngi18n" original="ng.template">
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="brandAria" datatype="html">
+        <source>Ir a inicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="brandName" datatype="html">
+        <source>Resume Maker</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">5,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navHome" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">14,16</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navResumeList" datatype="html">
+        <source>Resumes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">20,22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="navResumeCreate" datatype="html">
+        <source>Crear Resume</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">26,29</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="logoutAria" datatype="html">
+        <source>Cerrar sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="logoutBtn" datatype="html">
+        <source> Logout </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="menuAria" datatype="html">
+        <source>Menu</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/layout/shell/shell.component.html</context>
+          <context context-type="linenumber">43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="verifyTitle" datatype="html">
+        <source>Verificación de cuenta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="verifySubtitle" datatype="html">
+        <source> Gracias por registrarte en <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Resume Interactivo<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="verifyingText" datatype="html">
+        <source>Verificando tu cuenta…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="verifyingHint" datatype="html">
+        <source>Esto puede tardar unos segundos.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">15,18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="successTitle" datatype="html">
+        <source>¡Listo!</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">21,22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="userIdLabel" datatype="html">
+        <source>ID de usuario:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">24,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goLoginBtn" datatype="html">
+        <source> Ir a iniciar sesión </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="errorTitle" datatype="html">
+        <source>Ups…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">35,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="backToLoginBtn" datatype="html">
+        <source> Volver al login </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">38,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="idleText" datatype="html">
+        <source>Token listo para verificar.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">44,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="footerHelp" datatype="html">
+        <source> Si tenés problemas, solicitá un nuevo correo de verificación. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/confirm/confirm.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.title" datatype="html">
+        <source>¿Olvidaste tu contraseña?</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.subtitle" datatype="html">
+        <source> Escribí tu email y te enviaremos un enlace para restablecerla. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.label.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">8,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.error.required" datatype="html">
+        <source> El email es obligatorio. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">19,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.error.format" datatype="html">
+        <source> Formato de email inválido. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">22,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.button" datatype="html">
+        <source>Enviar enlace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.sending" datatype="html">
+        <source>Enviando…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.success" datatype="html">
+        <source> Si el email existe, te enviamos un enlace para restablecer la contraseña. Revisá tu bandeja de entrada y Spam. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">34,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgot.rateLimited" datatype="html">
+        <source> Debes esperar <x id="INTERPOLATION" equiv-text="{{ rateLimitMin }}"/> minutos antes de volver a pedir el enlace. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/forgot/forgot.component.html</context>
+          <context context-type="linenumber">40,43</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="appTitle" datatype="html">
+        <source>— RESUME MAKER —</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">4,5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginTitle" datatype="html">
+        <source>Login</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">5,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailLabel" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailPlaceholder" datatype="html">
+        <source>you@example.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailRequired" datatype="html">
+        <source>Email requerido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="emailInvalid" datatype="html">
+        <source>Formato inválido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">39,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordLabel" datatype="html">
+        <source>Password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">26,28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">45,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordPlaceholder" datatype="html">
+        <source>••••••••</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordRequired" datatype="html">
+        <source>Password requerida</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">37,38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordMinLength" datatype="html">
+        <source> Mínimo 6 caracteres </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ loading ? &apos;Ingresando...&apos; : &apos;Login&apos; }}"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="createAccountLink" datatype="html">
+        <source>Create account</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="forgotPasswordLink" datatype="html">
+        <source>Forgot password</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/login/login.component.html</context>
+          <context context-type="linenumber">53,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="registerTitle" datatype="html">
+        <source>Crear cuenta</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullNameLabel" datatype="html">
+        <source>Nombre completo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">9,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullNamePlaceholder" datatype="html">
+        <source>Juan Pérez</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullNameRequired" datatype="html">
+        <source>Nombre requerido</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="fullNameMinLen" datatype="html">
+        <source>Debe tener al menos 2 caracteres.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">21,23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="passwordMinLen" datatype="html">
+        <source>Debe tener al menos 8 caracteres.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">57,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="registerCta" datatype="html">
+        <source> Registrarme </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">63,64</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="goLogin" datatype="html">
+        <source>¿Ya tenés cuenta? Iniciar sesión</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/register/register.component.html</context>
+          <context context-type="linenumber">68,71</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.title" datatype="html">
+        <source>Restablecer contraseña</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">2,3</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.subtitle" datatype="html">
+        <source> Ingresá tu nueva contraseña y confirmala para continuar. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">4,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.success" datatype="html">
+        <source>¡Contraseña actualizada! Ya podés </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">9,10</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.loginLink" datatype="html">
+        <source> iniciar sesión </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">11,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.label.password" datatype="html">
+        <source>Nueva contraseña</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">18,20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.error.password.required" datatype="html">
+        <source> La contraseña es obligatoria. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">29,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.error.password.min" datatype="html">
+        <source> Debe tener al menos 8 caracteres. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">32,36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.label.confirm" datatype="html">
+        <source>Confirmar contraseña</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">37,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.err.tokenInvalid" datatype="html">
+        <source> El enlace es inválido o expiró. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">48,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.err.userNotFound" datatype="html">
+        <source> Usuario no encontrado. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">52,55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.err.tokenUsed" datatype="html">
+        <source> El enlace ya fue usado o caducó. </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">56,59</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.button" datatype="html">
+        <source>Cambiar contraseña</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="reset.saving" datatype="html">
+        <source>Guardando…</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/auth/reset/reset-password.component.html</context>
+          <context context-type="linenumber">69,70</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.school" datatype="html">
+        <source>Institución</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.schoolPlaceholder" datatype="html">
+        <source>Ej: Universidad X</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.degree" datatype="html">
+        <source>Título / Carrera</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.degreePlaceholder" datatype="html">
+        <source>Ej: Ingeniería Informática</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.period" datatype="html">
+        <source>Período</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.startPlaceholder" datatype="html">
+        <source>Inicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.endPlaceholder" datatype="html">
+        <source>Fin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.still" datatype="html">
+        <source>Cursando actualmente</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.remove" datatype="html">
+        <source>Eliminar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">24,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="education.add" datatype="html">
+        <source>Agregar estudio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-education.component.html</context>
+          <context context-type="linenumber">28,29</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.company" datatype="html">
+        <source>Empresa</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.companyPlaceholder" datatype="html">
+        <source>Ej: OpenAI</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.role" datatype="html">
+        <source>Puesto</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.rolePlaceholder" datatype="html">
+        <source>Ej: Desarrollador Backend</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.period" datatype="html">
+        <source>Período</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.startPlaceholder" datatype="html">
+        <source>Inicio</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.endPlaceholder" datatype="html">
+        <source>Fin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.current" datatype="html">
+        <source>Trabajo actual</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">23,25</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.description" datatype="html">
+        <source>Descripción / Logros</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">26,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.descriptionPlaceholder" datatype="html">
+        <source>Ej: Lideré un equipo de 4 personas...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.remove" datatype="html">
+        <source>Eliminar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">30,34</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="experience.add" datatype="html">
+        <source>Agregar experiencia</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-experience.component.html</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.language" datatype="html">
+        <source>Idioma</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.fullName" datatype="html">
+        <source>Nombre completo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.fullNamePlaceholder" datatype="html">
+        <source>Ej: Juan Pérez</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.email" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.emailPlaceholder" datatype="html">
+        <source>ejemplo@correo.com</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.phone" datatype="html">
+        <source>Teléfono</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">20,21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.phonePlaceholder" datatype="html">
+        <source>+54 9 11 1234-5678</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.location" datatype="html">
+        <source>Ubicación</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">25,26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.locationPlaceholder" datatype="html">
+        <source>Ciudad, País</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.birthDate" datatype="html">
+        <source>Fecha de nacimiento</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">30,31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="personal.birthDatePlaceholder" datatype="html">
+        <source>YYYY-MM-DD</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-personal.component.html</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.name" datatype="html">
+        <source>Habilidad</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">3,4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.namePlaceholder" datatype="html">
+        <source>Ej: Python, SQL, Angular</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.level" datatype="html">
+        <source>Nivel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.levelPlaceholder" datatype="html">
+        <source>Seleccionar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.remove" datatype="html">
+        <source>Eliminar</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">14,17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="skills.add" datatype="html">
+        <source>Agregar habilidad</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume-create/steps/step-skills.component.html</context>
+          <context context-type="linenumber">18,19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="751025226581136733" datatype="html">
+        <source>Mis CVs</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">5,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3157075192613746682" datatype="html">
+        <source>+ Crear nuevo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">6,7</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1878944583384618422" datatype="html">
+        <source>Cargando...</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">10,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6241430030331255879" datatype="html">
+        <source>Todavía no creaste ningún CV.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7915358871268780376" datatype="html">
+        <source>Crear mi primer CV</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">15,16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5293537796822127156" datatype="html">
+        <source>CV</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4020028838548558734" datatype="html">
+        <source>Última edición</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">31,32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2656760189624669010" datatype="html">
+        <source>Acciones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">39,40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3224173449742656791" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Editar </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">43,44</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2037421902084845402" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>download<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Descargar </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">46,47</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5345113279963838268" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>delete<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Eliminar </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/pages/resume/resume.component.html</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+    </body>
   </file>
 </xliff>

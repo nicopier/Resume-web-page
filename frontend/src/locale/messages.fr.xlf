@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" target-language="fr" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="brandAria" datatype="html"><source>Ir a inicio</source><target>Aller à l'accueil</target></trans-unit>
+      <trans-unit id="brandName" datatype="html"><source>Resume Maker</source><target>Resume Maker</target></trans-unit>
+      <trans-unit id="navHome" datatype="html"><source>Home</source><target>Accueil</target></trans-unit>
+      <trans-unit id="navResumeList" datatype="html"><source>Resumes</source><target>CV</target></trans-unit>
+      <trans-unit id="navResumeCreate" datatype="html"><source>Crear Resume</source><target>Créer un CV</target></trans-unit>
+      <trans-unit id="logoutAria" datatype="html"><source>Cerrar sesión</source><target>Se déconnecter</target></trans-unit>
+      <trans-unit id="logoutBtn" datatype="html"><source> Logout </source><target> Déconnexion </target></trans-unit>
+      <trans-unit id="menuAria" datatype="html"><source>Menu</source><target>Menu</target></trans-unit>
+      <trans-unit id="verifyTitle" datatype="html"><source>Verificación de cuenta</source><target>Vérification du compte</target></trans-unit>
+      <trans-unit id="verifySubtitle" datatype="html">
+        <source> Gracias por registrarte en <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Resume Interactivo<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <target> Merci de vous être inscrit sur <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Resume Interactivo<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </target>
+      </trans-unit>
+      <trans-unit id="verifyingText" datatype="html"><source>Verificando tu cuenta…</source><target>Vérification de votre compte…</target></trans-unit>
+      <trans-unit id="verifyingHint" datatype="html"><source>Esto puede tardar unos segundos.</source><target>Cela peut prendre quelques secondes.</target></trans-unit>
+      <trans-unit id="successTitle" datatype="html"><source>¡Listo!</source><target>Terminé !</target></trans-unit>
+      <trans-unit id="userIdLabel" datatype="html"><source>ID de usuario:</source><target>ID utilisateur :</target></trans-unit>
+      <trans-unit id="goLoginBtn" datatype="html"><source> Ir a iniciar sesión </source><target> Aller à la connexion </target></trans-unit>
+      <trans-unit id="errorTitle" datatype="html"><source>Ups…</source><target>Oups…</target></trans-unit>
+      <trans-unit id="backToLoginBtn" datatype="html"><source> Volver al login </source><target> Retour à la connexion </target></trans-unit>
+      <trans-unit id="idleText" datatype="html"><source>Token listo para verificar.</source><target>Token prêt à vérifier.</target></trans-unit>
+      <trans-unit id="footerHelp" datatype="html"><source> Si tenés problemas, solicitá un nuevo correo de verificación. </source><target> Si vous avez des problèmes, demandez un nouvel e-mail de vérification. </target></trans-unit>
+      <trans-unit id="forgot.title" datatype="html"><source>¿Olvidaste tu contraseña?</source><target>Mot de passe oublié ?</target></trans-unit>
+      <trans-unit id="forgot.subtitle" datatype="html"><source> Escribí tu email y te enviaremos un enlace para restablecerla. </source><target> Saisissez votre e-mail et nous vous enverrons un lien pour le réinitialiser. </target></trans-unit>
+      <trans-unit id="forgot.label.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="forgot.error.required" datatype="html"><source> El email es obligatorio. </source><target> L'e-mail est obligatoire. </target></trans-unit>
+      <trans-unit id="forgot.error.format" datatype="html"><source> Formato de email inválido. </source><target> Format d'e-mail invalide. </target></trans-unit>
+      <trans-unit id="forgot.button" datatype="html"><source>Enviar enlace</source><target>Envoyer le lien</target></trans-unit>
+      <trans-unit id="forgot.sending" datatype="html"><source>Enviando…</source><target>Envoi…</target></trans-unit>
+      <trans-unit id="forgot.success" datatype="html"><source> Si el email existe, te enviamos un enlace para restablecer la contraseña. Revisá tu bandeja de entrada y Spam. </source><target> Si l'e-mail existe, nous vous avons envoyé un lien pour réinitialiser votre mot de passe. Vérifiez votre boîte de réception et les spams. </target></trans-unit>
+      <trans-unit id="forgot.rateLimited" datatype="html">
+        <source> Debes esperar <x id="INTERPOLATION" equiv-text="{{ rateLimitMin }}"/> minutos antes de volver a pedir el enlace. </source>
+        <target> Vous devez attendre <x id="INTERPOLATION" equiv-text="{{ rateLimitMin }}"/> minutes avant de redemander le lien. </target>
+      </trans-unit>
+      <trans-unit id="appTitle" datatype="html"><source>— RESUME MAKER —</source><target>— RESUME MAKER —</target></trans-unit>
+      <trans-unit id="loginTitle" datatype="html"><source>Login</source><target>Connexion</target></trans-unit>
+      <trans-unit id="emailLabel" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="emailPlaceholder" datatype="html"><source>you@example.com</source><target>vous@exemple.com</target></trans-unit>
+      <trans-unit id="emailRequired" datatype="html"><source>Email requerido</source><target>E-mail requis</target></trans-unit>
+      <trans-unit id="emailInvalid" datatype="html"><source>Formato inválido</source><target>Format invalide</target></trans-unit>
+      <trans-unit id="passwordLabel" datatype="html"><source>Password</source><target>Mot de passe</target></trans-unit>
+      <trans-unit id="passwordPlaceholder" datatype="html"><source>••••••••</source><target>••••••••</target></trans-unit>
+      <trans-unit id="passwordRequired" datatype="html"><source>Password requerida</source><target>Mot de passe requis</target></trans-unit>
+      <trans-unit id="passwordMinLength" datatype="html"><source> Mínimo 6 caracteres </source><target> Minimum 6 caractères </target></trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ loading ? 'Ingresando...' : 'Login' }}"/> </source>
+        <target> <x id="INTERPOLATION" equiv-text="{{ loading ? 'Ingresando...' : 'Login' }}"/> </target>
+      </trans-unit>
+      <trans-unit id="createAccountLink" datatype="html"><source>Create account</source><target>Créer un compte</target></trans-unit>
+      <trans-unit id="forgotPasswordLink" datatype="html"><source>Forgot password</source><target>Mot de passe oublié</target></trans-unit>
+      <trans-unit id="registerTitle" datatype="html"><source>Crear cuenta</source><target>Créer un compte</target></trans-unit>
+      <trans-unit id="fullNameLabel" datatype="html"><source>Nombre completo</source><target>Nom complet</target></trans-unit>
+      <trans-unit id="fullNamePlaceholder" datatype="html"><source>Juan Pérez</source><target>Jean Dupont</target></trans-unit>
+      <trans-unit id="fullNameRequired" datatype="html"><source>Nombre requerido</source><target>Nom requis</target></trans-unit>
+      <trans-unit id="fullNameMinLen" datatype="html"><source>Debe tener al menos 2 caracteres.</source><target>Doit avoir au moins 2 caractères.</target></trans-unit>
+      <trans-unit id="passwordMinLen" datatype="html"><source>Debe tener al menos 8 caracteres.</source><target>Doit avoir au moins 8 caractères.</target></trans-unit>
+      <trans-unit id="registerCta" datatype="html"><source> Registrarme </source><target> S'inscrire </target></trans-unit>
+      <trans-unit id="goLogin" datatype="html"><source>¿Ya tenés cuenta? Iniciar sesión</source><target>Vous avez déjà un compte ? Connexion</target></trans-unit>
+      <trans-unit id="reset.title" datatype="html"><source>Restablecer contraseña</source><target>Réinitialiser le mot de passe</target></trans-unit>
+      <trans-unit id="reset.subtitle" datatype="html"><source> Ingresá tu nueva contraseña y confirmala para continuar. </source><target> Entrez votre nouveau mot de passe et confirmez-le pour continuer. </target></trans-unit>
+      <trans-unit id="reset.success" datatype="html"><source>¡Contraseña actualizada! Ya podés </source><target>Mot de passe mis à jour ! Vous pouvez maintenant </target></trans-unit>
+      <trans-unit id="reset.loginLink" datatype="html"><source> iniciar sesión </source><target> vous connecter </target></trans-unit>
+      <trans-unit id="reset.label.password" datatype="html"><source>Nueva contraseña</source><target>Nouveau mot de passe</target></trans-unit>
+      <trans-unit id="reset.error.password.required" datatype="html"><source> La contraseña es obligatoria. </source><target> Le mot de passe est obligatoire. </target></trans-unit>
+      <trans-unit id="reset.error.password.min" datatype="html"><source> Debe tener al menos 8 caracteres. </source><target> Doit avoir au moins 8 caractères. </target></trans-unit>
+      <trans-unit id="reset.label.confirm" datatype="html"><source>Confirmar contraseña</source><target>Confirmer le mot de passe</target></trans-unit>
+      <trans-unit id="reset.err.tokenInvalid" datatype="html"><source> El enlace es inválido o expiró. </source><target> Le lien est invalide ou expiré. </target></trans-unit>
+      <trans-unit id="reset.err.userNotFound" datatype="html"><source> Usuario no encontrado. </source><target> Utilisateur non trouvé. </target></trans-unit>
+      <trans-unit id="reset.err.tokenUsed" datatype="html"><source> El enlace ya fue usado o caducó. </source><target> Le lien a déjà été utilisé ou expiré. </target></trans-unit>
+      <trans-unit id="reset.button" datatype="html"><source>Cambiar contraseña</source><target>Changer le mot de passe</target></trans-unit>
+      <trans-unit id="reset.saving" datatype="html"><source>Guardando…</source><target>Sauvegarde…</target></trans-unit>
+      <trans-unit id="education.school" datatype="html"><source>Institución</source><target>Établissement</target></trans-unit>
+      <trans-unit id="education.schoolPlaceholder" datatype="html"><source>Ej: Universidad X</source><target>Ex. : Université X</target></trans-unit>
+      <trans-unit id="education.degree" datatype="html"><source>Título / Carrera</source><target>Diplôme / Formation</target></trans-unit>
+      <trans-unit id="education.degreePlaceholder" datatype="html"><source>Ej: Ingeniería Informática</source><target>Ex. : Ingénierie Informatique</target></trans-unit>
+      <trans-unit id="education.period" datatype="html"><source>Período</source><target>Période</target></trans-unit>
+      <trans-unit id="education.startPlaceholder" datatype="html"><source>Inicio</source><target>Début</target></trans-unit>
+      <trans-unit id="education.endPlaceholder" datatype="html"><source>Fin</source><target>Fin</target></trans-unit>
+      <trans-unit id="education.still" datatype="html"><source>Cursando actualmente</source><target>En cours</target></trans-unit>
+      <trans-unit id="education.remove" datatype="html"><source>Eliminar</source><target>Supprimer</target></trans-unit>
+      <trans-unit id="education.add" datatype="html"><source>Agregar estudio</source><target>Ajouter une formation</target></trans-unit>
+      <trans-unit id="experience.company" datatype="html"><source>Empresa</source><target>Entreprise</target></trans-unit>
+      <trans-unit id="experience.companyPlaceholder" datatype="html"><source>Ej: OpenAI</source><target>Ex. : OpenAI</target></trans-unit>
+      <trans-unit id="experience.role" datatype="html"><source>Puesto</source><target>Poste</target></trans-unit>
+      <trans-unit id="experience.rolePlaceholder" datatype="html"><source>Ej: Desarrollador Backend</source><target>Ex. : Développeur Backend</target></trans-unit>
+      <trans-unit id="experience.period" datatype="html"><source>Período</source><target>Période</target></trans-unit>
+      <trans-unit id="experience.startPlaceholder" datatype="html"><source>Inicio</source><target>Début</target></trans-unit>
+      <trans-unit id="experience.endPlaceholder" datatype="html"><source>Fin</source><target>Fin</target></trans-unit>
+      <trans-unit id="experience.current" datatype="html"><source>Trabajo actual</source><target>Emploi actuel</target></trans-unit>
+      <trans-unit id="experience.description" datatype="html"><source>Descripción / Logros</source><target>Description / Réalisations</target></trans-unit>
+      <trans-unit id="experience.descriptionPlaceholder" datatype="html"><source>Ej: Lideré un equipo de 4 personas...</source><target>Ex. : Dirigé une équipe de 4 personnes...</target></trans-unit>
+      <trans-unit id="experience.remove" datatype="html"><source>Eliminar</source><target>Supprimer</target></trans-unit>
+      <trans-unit id="experience.add" datatype="html"><source>Agregar experiencia</source><target>Ajouter une expérience</target></trans-unit>
+      <trans-unit id="personal.language" datatype="html"><source>Idioma</source><target>Langue</target></trans-unit>
+      <trans-unit id="personal.fullName" datatype="html"><source>Nombre completo</source><target>Nom complet</target></trans-unit>
+      <trans-unit id="personal.fullNamePlaceholder" datatype="html"><source>Ej: Juan Pérez</source><target>Ex. : Jean Dupont</target></trans-unit>
+      <trans-unit id="personal.email" datatype="html"><source>Email</source><target>E-mail</target></trans-unit>
+      <trans-unit id="personal.emailPlaceholder" datatype="html"><source>ejemplo@correo.com</source><target>exemple@email.com</target></trans-unit>
+      <trans-unit id="personal.phone" datatype="html"><source>Teléfono</source><target>Téléphone</target></trans-unit>
+      <trans-unit id="personal.phonePlaceholder" datatype="html"><source>+54 9 11 1234-5678</source><target>+33 1 23 45 67 89</target></trans-unit>
+      <trans-unit id="personal.location" datatype="html"><source>Ubicación</source><target>Localisation</target></trans-unit>
+      <trans-unit id="personal.locationPlaceholder" datatype="html"><source>Ciudad, País</source><target>Ville, Pays</target></trans-unit>
+      <trans-unit id="personal.birthDate" datatype="html"><source>Fecha de nacimiento</source><target>Date de naissance</target></trans-unit>
+      <trans-unit id="personal.birthDatePlaceholder" datatype="html"><source>YYYY-MM-DD</source><target>YYYY-MM-DD</target></trans-unit>
+      <trans-unit id="skills.name" datatype="html"><source>Habilidad</source><target>Compétence</target></trans-unit>
+      <trans-unit id="skills.namePlaceholder" datatype="html"><source>Ej: Python, SQL, Angular</source><target>Ex. : Python, SQL, Angular</target></trans-unit>
+      <trans-unit id="skills.level" datatype="html"><source>Nivel</source><target>Niveau</target></trans-unit>
+      <trans-unit id="skills.levelPlaceholder" datatype="html"><source>Seleccionar</source><target>Sélectionner</target></trans-unit>
+      <trans-unit id="skills.remove" datatype="html"><source>Eliminar</source><target>Supprimer</target></trans-unit>
+      <trans-unit id="skills.add" datatype="html"><source>Agregar habilidad</source><target>Ajouter une compétence</target></trans-unit>
+      <trans-unit id="751025226581136733" datatype="html"><source>Mis CVs</source><target>Mes CV</target></trans-unit>
+      <trans-unit id="3157075192613746682" datatype="html"><source>+ Crear nuevo</source><target>+ Créer nouveau</target></trans-unit>
+      <trans-unit id="1878944583384618422" datatype="html"><source>Cargando...</source><target>Chargement...</target></trans-unit>
+      <trans-unit id="6241430030331255879" datatype="html"><source>Todavía no creaste ningún CV.</source><target>Vous n'avez encore créé aucun CV.</target></trans-unit>
+      <trans-unit id="7915358871268780376" datatype="html"><source>Crear mi primer CV</source><target>Créer mon premier CV</target></trans-unit>
+      <trans-unit id="5293537796822127156" datatype="html"><source>CV</source><target>CV</target></trans-unit>
+      <trans-unit id="4020028838548558734" datatype="html"><source>Última edición</source><target>Dernière modification</target></trans-unit>
+      <trans-unit id="2656760189624669010" datatype="html"><source>Acciones</source><target>Actions</target></trans-unit>
+      <trans-unit id="3224173449742656791" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Editar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Modifier </target>
+      </trans-unit>
+      <trans-unit id="2037421902084845402" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>download<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Descargar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>download<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Télécharger </target>
+      </trans-unit>
+      <trans-unit id="5345113279963838268" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>delete<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Eliminar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>delete<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Supprimer </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

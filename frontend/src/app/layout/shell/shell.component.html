@@ -28,6 +28,17 @@
     </ul>
 
     <div class="actions">
+      <div class="locale-switcher">
+        <button
+          *ngFor="let loc of locales"
+          class="locale-btn"
+          [class.active]="loc.code === currentLocale"
+          type="button"
+          (click)="switchLocale(loc.code)"
+          [attr.title]="loc.label">
+          {{ loc.flag }}
+        </button>
+      </div>
       <button class="btn logout"
               type="button"
               (click)="logout()"
@@ -50,6 +61,17 @@
     <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" i18n="@@navHome">Home</a>
     <a routerLink="/resume" routerLinkActive="active" i18n="@@navResumeList">Resumes</a>
     <a routerLink="/resume/new" routerLinkActive="active" i18n="@@navResumeCreate">Crear Resume</a>
+    <div class="locale-switcher drawer-locale">
+      <button
+        *ngFor="let loc of locales"
+        class="locale-btn"
+        [class.active]="loc.code === currentLocale"
+        type="button"
+        (click)="switchLocale(loc.code)"
+        [attr.title]="loc.label">
+        {{ loc.flag }}
+      </button>
+    </div>
     <button class="btn logout" type="button" (click)="logout()" i18n="@@logoutBtn">Logout</button>
   </div>
 </header>

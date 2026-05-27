@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="es" target-language="zh" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="brandAria" datatype="html"><source>Ir a inicio</source><target>前往首页</target></trans-unit>
+      <trans-unit id="brandName" datatype="html"><source>Resume Maker</source><target>Resume Maker</target></trans-unit>
+      <trans-unit id="navHome" datatype="html"><source>Home</source><target>首页</target></trans-unit>
+      <trans-unit id="navResumeList" datatype="html"><source>Resumes</source><target>简历列表</target></trans-unit>
+      <trans-unit id="navResumeCreate" datatype="html"><source>Crear Resume</source><target>创建简历</target></trans-unit>
+      <trans-unit id="logoutAria" datatype="html"><source>Cerrar sesión</source><target>退出登录</target></trans-unit>
+      <trans-unit id="logoutBtn" datatype="html"><source> Logout </source><target> 退出 </target></trans-unit>
+      <trans-unit id="menuAria" datatype="html"><source>Menu</source><target>菜单</target></trans-unit>
+      <trans-unit id="verifyTitle" datatype="html"><source>Verificación de cuenta</source><target>账户验证</target></trans-unit>
+      <trans-unit id="verifySubtitle" datatype="html">
+        <source> Gracias por registrarte en <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Resume Interactivo<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>. </source>
+        <target> 感谢您注册 <x id="START_TAG_STRONG" ctype="x-strong" equiv-text="&lt;strong&gt;"/>Resume Interactivo<x id="CLOSE_TAG_STRONG" ctype="x-strong" equiv-text="&lt;/strong&gt;"/>。 </target>
+      </trans-unit>
+      <trans-unit id="verifyingText" datatype="html"><source>Verificando tu cuenta…</source><target>正在验证您的账户…</target></trans-unit>
+      <trans-unit id="verifyingHint" datatype="html"><source>Esto puede tardar unos segundos.</source><target>这可能需要几秒钟。</target></trans-unit>
+      <trans-unit id="successTitle" datatype="html"><source>¡Listo!</source><target>完成！</target></trans-unit>
+      <trans-unit id="userIdLabel" datatype="html"><source>ID de usuario:</source><target>用户ID：</target></trans-unit>
+      <trans-unit id="goLoginBtn" datatype="html"><source> Ir a iniciar sesión </source><target> 前往登录 </target></trans-unit>
+      <trans-unit id="errorTitle" datatype="html"><source>Ups…</source><target>出错了…</target></trans-unit>
+      <trans-unit id="backToLoginBtn" datatype="html"><source> Volver al login </source><target> 返回登录 </target></trans-unit>
+      <trans-unit id="idleText" datatype="html"><source>Token listo para verificar.</source><target>令牌已准备好进行验证。</target></trans-unit>
+      <trans-unit id="footerHelp" datatype="html"><source> Si tenés problemas, solicitá un nuevo correo de verificación. </source><target> 如果遇到问题，请申请新的验证邮件。 </target></trans-unit>
+      <trans-unit id="forgot.title" datatype="html"><source>¿Olvidaste tu contraseña?</source><target>忘记密码？</target></trans-unit>
+      <trans-unit id="forgot.subtitle" datatype="html"><source> Escribí tu email y te enviaremos un enlace para restablecerla. </source><target> 输入您的邮箱，我们将发送重置链接给您。 </target></trans-unit>
+      <trans-unit id="forgot.label.email" datatype="html"><source>Email</source><target>邮箱</target></trans-unit>
+      <trans-unit id="forgot.error.required" datatype="html"><source> El email es obligatorio. </source><target> 邮箱不能为空。 </target></trans-unit>
+      <trans-unit id="forgot.error.format" datatype="html"><source> Formato de email inválido. </source><target> 邮箱格式无效。 </target></trans-unit>
+      <trans-unit id="forgot.button" datatype="html"><source>Enviar enlace</source><target>发送链接</target></trans-unit>
+      <trans-unit id="forgot.sending" datatype="html"><source>Enviando…</source><target>发送中…</target></trans-unit>
+      <trans-unit id="forgot.success" datatype="html"><source> Si el email existe, te enviamos un enlace para restablecer la contraseña. Revisá tu bandeja de entrada y Spam. </source><target> 如果该邮箱存在，我们已发送密码重置链接。请检查收件箱和垃圾邮件。 </target></trans-unit>
+      <trans-unit id="forgot.rateLimited" datatype="html">
+        <source> Debes esperar <x id="INTERPOLATION" equiv-text="{{ rateLimitMin }}"/> minutos antes de volver a pedir el enlace. </source>
+        <target> 您需要等待 <x id="INTERPOLATION" equiv-text="{{ rateLimitMin }}"/> 分钟后再申请链接。 </target>
+      </trans-unit>
+      <trans-unit id="appTitle" datatype="html"><source>— RESUME MAKER —</source><target>— RESUME MAKER —</target></trans-unit>
+      <trans-unit id="loginTitle" datatype="html"><source>Login</source><target>登录</target></trans-unit>
+      <trans-unit id="emailLabel" datatype="html"><source>Email</source><target>邮箱</target></trans-unit>
+      <trans-unit id="emailPlaceholder" datatype="html"><source>you@example.com</source><target>您的邮箱@示例.com</target></trans-unit>
+      <trans-unit id="emailRequired" datatype="html"><source>Email requerido</source><target>邮箱不能为空</target></trans-unit>
+      <trans-unit id="emailInvalid" datatype="html"><source>Formato inválido</source><target>格式无效</target></trans-unit>
+      <trans-unit id="passwordLabel" datatype="html"><source>Password</source><target>密码</target></trans-unit>
+      <trans-unit id="passwordPlaceholder" datatype="html"><source>••••••••</source><target>••••••••</target></trans-unit>
+      <trans-unit id="passwordRequired" datatype="html"><source>Password requerida</source><target>密码不能为空</target></trans-unit>
+      <trans-unit id="passwordMinLength" datatype="html"><source> Mínimo 6 caracteres </source><target> 至少6个字符 </target></trans-unit>
+      <trans-unit id="loginButton" datatype="html">
+        <source> <x id="INTERPOLATION" equiv-text="{{ loading ? 'Ingresando...' : 'Login' }}"/> </source>
+        <target> <x id="INTERPOLATION" equiv-text="{{ loading ? 'Ingresando...' : 'Login' }}"/> </target>
+      </trans-unit>
+      <trans-unit id="createAccountLink" datatype="html"><source>Create account</source><target>创建账户</target></trans-unit>
+      <trans-unit id="forgotPasswordLink" datatype="html"><source>Forgot password</source><target>忘记密码</target></trans-unit>
+      <trans-unit id="registerTitle" datatype="html"><source>Crear cuenta</source><target>创建账户</target></trans-unit>
+      <trans-unit id="fullNameLabel" datatype="html"><source>Nombre completo</source><target>全名</target></trans-unit>
+      <trans-unit id="fullNamePlaceholder" datatype="html"><source>Juan Pérez</source><target>张三</target></trans-unit>
+      <trans-unit id="fullNameRequired" datatype="html"><source>Nombre requerido</source><target>姓名不能为空</target></trans-unit>
+      <trans-unit id="fullNameMinLen" datatype="html"><source>Debe tener al menos 2 caracteres.</source><target>至少需要2个字符。</target></trans-unit>
+      <trans-unit id="passwordMinLen" datatype="html"><source>Debe tener al menos 8 caracteres.</source><target>至少需要8个字符。</target></trans-unit>
+      <trans-unit id="registerCta" datatype="html"><source> Registrarme </source><target> 注册 </target></trans-unit>
+      <trans-unit id="goLogin" datatype="html"><source>¿Ya tenés cuenta? Iniciar sesión</source><target>已有账户？立即登录</target></trans-unit>
+      <trans-unit id="reset.title" datatype="html"><source>Restablecer contraseña</source><target>重置密码</target></trans-unit>
+      <trans-unit id="reset.subtitle" datatype="html"><source> Ingresá tu nueva contraseña y confirmala para continuar. </source><target> 输入您的新密码并确认以继续。 </target></trans-unit>
+      <trans-unit id="reset.success" datatype="html"><source>¡Contraseña actualizada! Ya podés </source><target>密码已更新！您现在可以 </target></trans-unit>
+      <trans-unit id="reset.loginLink" datatype="html"><source> iniciar sesión </source><target> 登录 </target></trans-unit>
+      <trans-unit id="reset.label.password" datatype="html"><source>Nueva contraseña</source><target>新密码</target></trans-unit>
+      <trans-unit id="reset.error.password.required" datatype="html"><source> La contraseña es obligatoria. </source><target> 密码不能为空。 </target></trans-unit>
+      <trans-unit id="reset.error.password.min" datatype="html"><source> Debe tener al menos 8 caracteres. </source><target> 至少需要8个字符。 </target></trans-unit>
+      <trans-unit id="reset.label.confirm" datatype="html"><source>Confirmar contraseña</source><target>确认密码</target></trans-unit>
+      <trans-unit id="reset.err.tokenInvalid" datatype="html"><source> El enlace es inválido o expiró. </source><target> 链接无效或已过期。 </target></trans-unit>
+      <trans-unit id="reset.err.userNotFound" datatype="html"><source> Usuario no encontrado. </source><target> 用户未找到。 </target></trans-unit>
+      <trans-unit id="reset.err.tokenUsed" datatype="html"><source> El enlace ya fue usado o caducó. </source><target> 链接已被使用或已过期。 </target></trans-unit>
+      <trans-unit id="reset.button" datatype="html"><source>Cambiar contraseña</source><target>更改密码</target></trans-unit>
+      <trans-unit id="reset.saving" datatype="html"><source>Guardando…</source><target>保存中…</target></trans-unit>
+      <trans-unit id="education.school" datatype="html"><source>Institución</source><target>学校/机构</target></trans-unit>
+      <trans-unit id="education.schoolPlaceholder" datatype="html"><source>Ej: Universidad X</source><target>例：X大学</target></trans-unit>
+      <trans-unit id="education.degree" datatype="html"><source>Título / Carrera</source><target>学位/专业</target></trans-unit>
+      <trans-unit id="education.degreePlaceholder" datatype="html"><source>Ej: Ingeniería Informática</source><target>例：计算机工程</target></trans-unit>
+      <trans-unit id="education.period" datatype="html"><source>Período</source><target>学习时间</target></trans-unit>
+      <trans-unit id="education.startPlaceholder" datatype="html"><source>Inicio</source><target>开始</target></trans-unit>
+      <trans-unit id="education.endPlaceholder" datatype="html"><source>Fin</source><target>结束</target></trans-unit>
+      <trans-unit id="education.still" datatype="html"><source>Cursando actualmente</source><target>目前在读</target></trans-unit>
+      <trans-unit id="education.remove" datatype="html"><source>Eliminar</source><target>删除</target></trans-unit>
+      <trans-unit id="education.add" datatype="html"><source>Agregar estudio</source><target>添加教育经历</target></trans-unit>
+      <trans-unit id="experience.company" datatype="html"><source>Empresa</source><target>公司</target></trans-unit>
+      <trans-unit id="experience.companyPlaceholder" datatype="html"><source>Ej: OpenAI</source><target>例：OpenAI</target></trans-unit>
+      <trans-unit id="experience.role" datatype="html"><source>Puesto</source><target>职位</target></trans-unit>
+      <trans-unit id="experience.rolePlaceholder" datatype="html"><source>Ej: Desarrollador Backend</source><target>例：后端开发工程师</target></trans-unit>
+      <trans-unit id="experience.period" datatype="html"><source>Período</source><target>工作时间</target></trans-unit>
+      <trans-unit id="experience.startPlaceholder" datatype="html"><source>Inicio</source><target>开始</target></trans-unit>
+      <trans-unit id="experience.endPlaceholder" datatype="html"><source>Fin</source><target>结束</target></trans-unit>
+      <trans-unit id="experience.current" datatype="html"><source>Trabajo actual</source><target>当前工作</target></trans-unit>
+      <trans-unit id="experience.description" datatype="html"><source>Descripción / Logros</source><target>描述/成就</target></trans-unit>
+      <trans-unit id="experience.descriptionPlaceholder" datatype="html"><source>Ej: Lideré un equipo de 4 personas...</source><target>例：带领4人团队...</target></trans-unit>
+      <trans-unit id="experience.remove" datatype="html"><source>Eliminar</source><target>删除</target></trans-unit>
+      <trans-unit id="experience.add" datatype="html"><source>Agregar experiencia</source><target>添加工作经历</target></trans-unit>
+      <trans-unit id="personal.language" datatype="html"><source>Idioma</source><target>语言</target></trans-unit>
+      <trans-unit id="personal.fullName" datatype="html"><source>Nombre completo</source><target>全名</target></trans-unit>
+      <trans-unit id="personal.fullNamePlaceholder" datatype="html"><source>Ej: Juan Pérez</source><target>例：张三</target></trans-unit>
+      <trans-unit id="personal.email" datatype="html"><source>Email</source><target>邮箱</target></trans-unit>
+      <trans-unit id="personal.emailPlaceholder" datatype="html"><source>ejemplo@correo.com</source><target>示例@邮件.com</target></trans-unit>
+      <trans-unit id="personal.phone" datatype="html"><source>Teléfono</source><target>电话</target></trans-unit>
+      <trans-unit id="personal.phonePlaceholder" datatype="html"><source>+54 9 11 1234-5678</source><target>+86 138 0000 0000</target></trans-unit>
+      <trans-unit id="personal.location" datatype="html"><source>Ubicación</source><target>位置</target></trans-unit>
+      <trans-unit id="personal.locationPlaceholder" datatype="html"><source>Ciudad, País</source><target>城市，国家</target></trans-unit>
+      <trans-unit id="personal.birthDate" datatype="html"><source>Fecha de nacimiento</source><target>出生日期</target></trans-unit>
+      <trans-unit id="personal.birthDatePlaceholder" datatype="html"><source>YYYY-MM-DD</source><target>YYYY-MM-DD</target></trans-unit>
+      <trans-unit id="skills.name" datatype="html"><source>Habilidad</source><target>技能</target></trans-unit>
+      <trans-unit id="skills.namePlaceholder" datatype="html"><source>Ej: Python, SQL, Angular</source><target>例：Python, SQL, Angular</target></trans-unit>
+      <trans-unit id="skills.level" datatype="html"><source>Nivel</source><target>级别</target></trans-unit>
+      <trans-unit id="skills.levelPlaceholder" datatype="html"><source>Seleccionar</source><target>选择</target></trans-unit>
+      <trans-unit id="skills.remove" datatype="html"><source>Eliminar</source><target>删除</target></trans-unit>
+      <trans-unit id="skills.add" datatype="html"><source>Agregar habilidad</source><target>添加技能</target></trans-unit>
+      <trans-unit id="751025226581136733" datatype="html"><source>Mis CVs</source><target>我的简历</target></trans-unit>
+      <trans-unit id="3157075192613746682" datatype="html"><source>+ Crear nuevo</source><target>+ 创建新简历</target></trans-unit>
+      <trans-unit id="1878944583384618422" datatype="html"><source>Cargando...</source><target>加载中...</target></trans-unit>
+      <trans-unit id="6241430030331255879" datatype="html"><source>Todavía no creaste ningún CV.</source><target>您还没有创建任何简历。</target></trans-unit>
+      <trans-unit id="7915358871268780376" datatype="html"><source>Crear mi primer CV</source><target>创建我的第一份简历</target></trans-unit>
+      <trans-unit id="5293537796822127156" datatype="html"><source>CV</source><target>简历</target></trans-unit>
+      <trans-unit id="4020028838548558734" datatype="html"><source>Última edición</source><target>最后编辑</target></trans-unit>
+      <trans-unit id="2656760189624669010" datatype="html"><source>Acciones</source><target>操作</target></trans-unit>
+      <trans-unit id="3224173449742656791" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Editar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>edit<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> 编辑 </target>
+      </trans-unit>
+      <trans-unit id="2037421902084845402" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>download<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Descargar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>download<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> 下载 </target>
+      </trans-unit>
+      <trans-unit id="5345113279963838268" datatype="html">
+        <source><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>delete<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> Eliminar </source>
+        <target><x id="START_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;mat-icon&gt;"/>delete<x id="CLOSE_TAG_MAT_ICON" ctype="x-mat_icon" equiv-text="&lt;/mat-icon&gt;"/> 删除 </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

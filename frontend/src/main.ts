@@ -1,4 +1,3 @@
-import '@angular/localize/init'; // ← volvemos a ponerlo acá
 import { bootstrapApplication } from '@angular/platform-browser';
 import { App } from './app/app';
 import { provideRouter } from '@angular/router';

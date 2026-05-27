@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, Validators, ReactiveFormsModule, FormGroup, FormArray } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonModule }  from '@angular/material/button';
 
@@ -34,7 +35,7 @@ export class ResumeCreateComponent {
   loading = false;
   errorMsg = '';
 
-  constructor(private fb: FormBuilder, private resume: ResumeService) {
+  constructor(private fb: FormBuilder, private resume: ResumeService, private router: Router) {
     this.form = this.fb.group({
       // PASO 1 (en raíz, según tu schema)
       locale: ['en', Validators.required],
@@ -173,8 +174,7 @@ submit() {
   this.resume.create({ data: payload }).subscribe({
     next: () => {
       this.loading = false;
-      alert('CV guardado');
-      console.log('JSON enviado al backend:', { data: payload });
+      this.router.navigate(['/home']);
     },
     error: (err: any) => {
       this.loading = false;

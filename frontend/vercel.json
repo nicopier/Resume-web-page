@@ -2,6 +2,11 @@
   "buildCommand": "npm run build -- --configuration=production",
   "outputDirectory": "dist/frontend/browser",
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/en/:path*", "destination": "/en/index.html" },
+    { "source": "/pt/:path*", "destination": "/pt/index.html" },
+    { "source": "/fr/:path*", "destination": "/fr/index.html" },
+    { "source": "/zh/:path*", "destination": "/zh/index.html" },
+    { "source": "/es/:path*", "destination": "/es/index.html" },
+    { "source": "/(.*)", "destination": "/es/index.html" }
   ]
 }
