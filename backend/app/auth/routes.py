@@ -1,11 +1,13 @@
 # app/auth/routes.py
-from fastapi import APIRouter, Depends, HTTPException, status, Query
+from fastapi import APIRouter, Depends, HTTPException, Request, status, Query
 from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from sqlalchemy import select
 from pydantic import EmailStr, BaseModel
 from datetime import datetime, timezone, timedelta
 import os
+
+from app.core.limiter import limiter
 
 from app.db.session import get_db
 from app.db.models import User
@@ -28,7 +30,8 @@ router = APIRouter(prefix="/auth", tags=["auth"])
 # -------------------------------------------------------------------
 
 @router.post("/register", response_model=UserOut)
-def register(user: UserCreate, db: Session = Depends(get_db)):
+@limiter.limit("5/minute")
+def register(request: Request, user: UserCreate, db: Session = Depends(get_db)):
     exists = db.execute(select(User).where(User.email == user.email)).scalar_one_or_none()
     if exists:
         raise HTTPException(400, "Email ya registrado")
@@ -67,7 +70,8 @@ def check_email(email: EmailStr, db: Session = Depends(get_db)):
 # Login (bloquea si no verificó)
 # -------------------------------------------------------------------
 @router.post("/login", response_model=Token)
-def login_json(form: LoginForm, db: Session = Depends(get_db)):
+@limiter.limit("10/minute")
+def login_json(request: Request, form: LoginForm, db: Session = Depends(get_db)):
     u = db.execute(select(User).where(User.email == form.email)).scalar_one_or_none()
     if not u or not verify_password(form.password, u.hashed_password):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Credenciales inválidas")
@@ -82,7 +86,8 @@ def login_json(form: LoginForm, db: Session = Depends(get_db)):
     return {"access_token": create_access_token(u.email), "token_type": "bearer"}
 
 @router.post("/login-form", response_model=Token)
-def login_form(form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+@limiter.limit("10/minute")
+def login_form(request: Request, form: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     u = db.execute(select(User).where(User.email == form.username)).scalar_one_or_none()
     if not u or not verify_password(form.password, u.hashed_password):
         raise HTTPException(status.HTTP_401_UNAUTHORIZED, "Credenciales inválidas")
@@ -121,11 +126,7 @@ def forgot_password(payload: ForgotPasswordRequest, db: Session = Depends(get_db
         )
 
     token = create_reset_token(user_id=user.id, password_version=user.password_version)
-    print("[FORGOT] token:", token[:20], "...", token[-20:])  # <-- LOG
     action_url = _build_reset_link(token)
-    #
-    #print("[FORGOT] url:", action_url)     
-    #action_url = _build_reset_link(token)
 
     send_reset_password_email(
         to=user.email,
@@ -144,24 +145,9 @@ def forgot_password(payload: ForgotPasswordRequest, db: Session = Depends(get_db
 
 @router.post("/reset-password", status_code=status.HTTP_204_NO_CONTENT)
 def reset_password(payload: ResetPasswordRequest, db: Session = Depends(get_db)):
-    
-    print("[RESET] incoming token:", (payload.token or "")[:20], "...", (payload.token or "")[-20:])
     try:
         data = decode_reset_token(payload.token)
-        #print("[RESET] decoded:", {"sub": getattr(data, "sub", None), "v": getattr(data, "v", None), "exp": getattr(data, "exp", None)})
-    except ValueError as e:
-        #print("[RESET] decode error:", str(e))  # <-- LOG del motivo exacto
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail={"code": "TOKEN_INVALID_OR_EXPIRED"}
-        )
-    
-    
-    # 1) Decodificar y validar token
-    try:
-        data = decode_reset_token(payload.token)  # debe traer .sub (user_id) y .v (password_version)
     except ValueError:
-        # → estructura pensada para i18n en el front
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail={"code": "TOKEN_INVALID_OR_EXPIRED"}
@@ -238,7 +224,7 @@ class ResendConfirmIn(BaseModel):
 def resend_confirm(payload: ResendConfirmIn, db: Session = Depends(get_db)):
     u = db.execute(select(User).where(User.email == payload.email)).scalar_one_or_none()
     if not u:
-        raise HTTPException(status.HTTP_404_NOT_FOUND, "Usuario no encontrado")
+        return {"ok": True, "message": "Si el correo existe, se reenviará el link"}
 
     if getattr(u, "is_verified", False):
         raise HTTPException(status.HTTP_400_BAD_REQUEST, "La cuenta ya está verificada")

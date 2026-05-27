@@ -39,6 +39,9 @@ class Settings(BaseSettings):
     FRONTEND_URL: str = "http://localhost:4200"
     FRONTEND_BASE_URL: str = "http://localhost:4200"
 
+    # ---- Dev ----
+    DEBUG: bool = False
+
     # ---- Gmail ----
     # 👉 con defaults para no romper si faltan
     GMAIL_USER: str = ""
