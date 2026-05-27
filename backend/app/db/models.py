@@ -24,7 +24,7 @@ class User(Base):
     password_version: Mapped[int] = mapped_column(Integer, nullable=False, default=0, server_default="0")
 
     # Verificación de email
-    is_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("0"))
+    is_verified: Mapped[bool] = mapped_column(Boolean, nullable=False, server_default=text("false"))
     verified_at: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     last_verification_sent: Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
     last_password_reset_sent:  Mapped[Optional[datetime]] = mapped_column(DateTime, nullable=True)
