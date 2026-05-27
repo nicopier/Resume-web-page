@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
+import { LocaleSwitcherComponent } from '../../../shared/locale-switcher/locale-switcher.component';
 
 @Component({
   standalone: true,
   selector: 'app-confirm',
-  imports: [CommonModule],
+  imports: [CommonModule, LocaleSwitcherComponent],
   templateUrl: './confirm.component.html',
   styleUrls: ['./confirm.scss'],
 })

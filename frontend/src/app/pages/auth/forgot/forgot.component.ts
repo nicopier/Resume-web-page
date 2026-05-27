@@ -2,11 +2,12 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
+import { LocaleSwitcherComponent } from '../../../shared/locale-switcher/locale-switcher.component';
 
 @Component({
   selector: 'app-forgot',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, LocaleSwitcherComponent],
   templateUrl: './forgot.component.html',
   styleUrls: ['./forgot.scss'],
 })

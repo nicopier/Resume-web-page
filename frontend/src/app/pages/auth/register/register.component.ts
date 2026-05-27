@@ -5,13 +5,14 @@ import { map, catchError } from 'rxjs/operators';
 import { AbstractControl, ReactiveFormsModule, Validators, FormBuilder, FormGroup, ValidationErrors } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import { LocaleSwitcherComponent } from '../../../shared/locale-switcher/locale-switcher.component';
 
 type RegisterDTO = { full_name: string; email: string; password: string };
 
 @Component({
   selector: 'app-register',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, LocaleSwitcherComponent],
   templateUrl: './register.component.html',
   styleUrls: ['./register.scss'],
 })

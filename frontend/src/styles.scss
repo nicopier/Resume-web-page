@@ -56,3 +56,11 @@ body {
 
 // Snackbar dark
 .mdc-snackbar__surface { background: var(--bg-card) !important; color: var(--text-primary) !important; border: 1px solid var(--border) !important; }
+
+// Locale switcher en páginas de auth (posición fija arriba a la derecha)
+.auth-locale {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+}

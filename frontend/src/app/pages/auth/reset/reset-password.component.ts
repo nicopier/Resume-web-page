@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule, FormBuilder, Validators } from '@angular/forms';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import { LocaleSwitcherComponent } from '../../../shared/locale-switcher/locale-switcher.component';
 
 @Component({
   standalone: true,
   selector: 'app-reset-password',
-  imports: [CommonModule, ReactiveFormsModule,RouterLink],
+  imports: [CommonModule, ReactiveFormsModule, RouterLink, LocaleSwitcherComponent],
   templateUrl: './reset-password.component.html',
   styleUrls: ['./reset-password.scss'],
 })

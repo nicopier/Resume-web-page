@@ -3,6 +3,7 @@ import { FormBuilder, Validators, ReactiveFormsModule, FormGroup, FormControl } 
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { environment } from '../../../../environments/environment';
+import { LocaleSwitcherComponent } from '../../../shared/locale-switcher/locale-switcher.component';
 interface LoginForm {
   email: FormControl<string>;
   password: FormControl<string>;
@@ -11,7 +12,7 @@ interface LoginForm {
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [CommonModule, ReactiveFormsModule, RouterModule, LocaleSwitcherComponent],
   templateUrl: './login.component.html',
   styleUrls: ['./login.scss'],
 })
